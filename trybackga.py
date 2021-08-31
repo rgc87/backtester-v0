@@ -4,6 +4,7 @@ import pandas as pd
 from utils import klinesFilter
 import re
 
+
 # IMPORT DATA SOURCES
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
@@ -49,30 +50,44 @@ for x in range(number_of_generations):
 		genes = individual.genes
 
 		strategy = BBStrategy(
-			bb_len = genes[0],
-			n_std = genes[1]/10,
-			rsi_len = genes[2],
-			rsi_overbought = genes[3],
-			rsi_oversold = genes[4]
-			)
+			bb_len			=	genes[0],
+			n_std 			=	genes[1]/10,
+			rsi_len 		=	genes[2],
+			rsi_overbought 	= 	genes[3],
+			rsi_oversold 	= 	genes[4]
+		)
 		strategy.setUp(df)
-		individual.backtester.__backtesting__(df, strategy, tp_long, tp_short, sl_long, sl_short)
-
+		individual.backtester.__backtesting__(
+			df,
+			strategy,
+			tp_long,
+			tp_short,
+			sl_long,
+			sl_short
+		)
 	P.crossover()
 	P.mutation()
 	population = sorted(
 		population,
 			key = lambda individual: individual.backtester.return_results(
-			symbol = symbol,
-			start_date = start_date,
-			end_date = end_date,
-			)['fitness_function'],reverse = True
+				symbol = symbol,
+				start_date = start_date,
+				end_date = end_date,
+			)\
+			['fitness_function'], reverse = True
 	)
-
-	best = population[0].backtester.return_results(symbol = symbol,start_date = start_date,end_date = end_date)
-	worst = population[-1].backtester.return_results(symbol = symbol,start_date = start_date,end_date = end_date)
+	best = population[0].backtester.return_results(
+		symbol = symbol,
+		start_date = start_date,
+		end_date = end_date
+	)
+	worst = population[-1].backtester.return_results(
+		symbol = symbol,
+		start_date = start_date,
+		end_date = end_date
+	)
 	output_best = pd.DataFrame.from_dict(best, orient='index')
-	output_worst = pd.DataFrame.from_dict(best, orient='index')
+	output_worst = pd.DataFrame.from_dict(worst, orient='index')
 
 	print(f''' GENERATION: {x}
 	________________________________________

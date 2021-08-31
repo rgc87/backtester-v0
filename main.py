@@ -4,16 +4,15 @@ from utils import klinesFilter
 from stratcode import BBStrategy
 import re
 
+
 # IMPORT DATA SOURCES
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df)
 df = df.iloc[25000:]
-
 start_date = df.index[0]
 end_date = df.index[-1]
 elapsed_time = start_date-end_date
-
 pairNamePattern = re.compile('[A-Z]{6,}')
 symbol = pairNamePattern.search(pathFile).group()
 
