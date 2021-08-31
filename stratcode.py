@@ -1,7 +1,13 @@
 import pandas_ta as ta
 
 class BBStrategy:
-	def __init__(self, bb_len, n_std, rsi_len, rsi_overbought, rsi_oversold):
+	def __init__(self,
+				bb_len,
+				n_std,
+				rsi_len,
+				rsi_overbought,
+				rsi_oversold
+	):
 		self.bb_len = bb_len
 		self.n_std = n_std
 		self.rsi_len = rsi_len

@@ -9,10 +9,16 @@ import re
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df)
-df = df.iloc[25000:]
+df = df.iloc[30000:]
+
 start_date = df.index[0]
 end_date = df.index[-1]
 elapsed_time = start_date-end_date
+
+first_price = df.close.iloc[0]
+bh_roi = (( df.close.iloc[-1] / df.close.iloc[0] )-1)*100
+last_price = df.close.iloc[-1]
+
 pairNamePattern = re.compile('[A-Z]{6,}')
 symbol = pairNamePattern.search(pathFile).group()
 
@@ -61,3 +67,9 @@ tryback.__backtesting__(
 output = tryback.return_results(symbol, start_date, end_date)
 results = pd.DataFrame.from_dict(output, orient='index')
 print(results)
+
+print(f'''
+    Strategy, roi: \t %{(((output['balance']) / (initial_balance))-1)*100:.2f}
+    Buy and Hold, roi: \t %{bh_roi:.2f}
+    For: {first_price} -> {last_price}
+    ''')
