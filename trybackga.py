@@ -9,7 +9,7 @@ import re
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df)
-df = df.iloc[33000:]
+df = df.iloc[20000:]
 start_date = df.index[0]
 end_date = df.index[-1]
 pairNamePattern = re.compile('[A-Z]{6,}')
@@ -31,6 +31,10 @@ P = Population(
 		(8, 100),	# rsi_len
 		(50, 100),	# rsi_overbought
 		(0, 50)		# rsi_oversold
+		# tp_long
+		# tp_short
+		# sl_long
+		# sl_short
 	],
 	n_best = 5,
 	mutation_rate = 0.1
@@ -101,9 +105,12 @@ for x in range(number_of_generations):
 	{population[-1].genes}
 	''')
 
-	the_bests.append( best['profit_after_fees'] )
+	the_bests.append( best )
 
-# BEST RESULTS FROM EVOLUTION
+# BEST RESULT FROM EVOLUTION
 print(
-	max(the_bests)
+	'*** *** BETTER RESULT OVERALL *** ***',
+	pd.DataFrame.from_dict(
+		max( the_bests, key= lambda x: x['profit_after_fees'] ),
+		orient='index')
 )
