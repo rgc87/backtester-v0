@@ -8,7 +8,6 @@ class BBStrategy:
 		self.rsi_overbought = rsi_overbought
 		self.rsi_oversold = rsi_oversold
 
-
 	def setUp(self, df):
 		bb = ta.bbands(
 			close = df['close'],
@@ -21,7 +20,6 @@ class BBStrategy:
 		df['rsi'] = ta.rsi(close = df['close'], length = self.rsi_len)
 		self.dataframe = df
 
-
 	def checkLongSignal(self, i = None):
 		df = self.dataframe
 		if i == None:
@@ -33,7 +31,6 @@ class BBStrategy:
 			return True
 		return False
 
-
 	def checkShortSignal(self, i = None):
 		df = self.dataframe
 		if i == None:
@@ -44,3 +41,8 @@ class BBStrategy:
 			(df['high'].iloc[i] < df['ubb'].iloc[i]):
 			return True
 		return False
+
+
+""" class otra:
+	def __init__(self):
+		pass """

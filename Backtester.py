@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import pandas as pd
 
 
 class Backtester():
@@ -118,18 +117,18 @@ class Backtester():
 		drawdown = sum(self.drawdown)
 		fees = (abs(profit) * self.fee_cost * self.num_operations)
 		results = {
-		'symbol' : symbol,
-		'start_date': start_date,
-		'end_date': end_date,
-		'balance' : self.balance,
-		'profit' :	profit,
-		'drawdown': drawdown,
-		'profit_after_fees': profit - fees,
-		'num_operations' : self.num_operations,
-		'num_long' : self.num_longs,
-		'num_shorts': self.num_shorts,
-		'winned' : self.winned,
-		'lossed' : self.lossed
+			'symbol' : symbol,
+			'start_date': start_date,
+			'end_date': end_date,
+			'balance' : self.balance,
+			'profit' :	profit,
+			'drawdown': drawdown,
+			'profit_after_fees': profit - fees,
+			'num_operations' : self.num_operations,
+			'num_long' : self.num_longs,
+			'num_shorts': self.num_shorts,
+			'winned' : self.winned,
+			'lossed' : self.lossed
 		}
 		if self.num_operations > 0 and (self.winned + self.lossed) > 0:
 			winrate = self.winned / (self.winned + self.lossed)
