@@ -5,7 +5,7 @@ import numpy as np
 class Backtester():
 	def __init__(self, initial_balance, leverage, trailing_stop_loss, entry_amount_p):
 		self.initial_balance = initial_balance
-		self.balance = initial_balance
+		self.balance = initial_balance # *100 if 1,2,3 -> 100,200,300 (1,3) ~ *1000 if 1,2,3 -> 1000,2000,3000 ...
 		self.amount = 0
 		self.leverage = leverage
 		self.fee_cost = 0.02 / 100	#Binance

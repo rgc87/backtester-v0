@@ -4,12 +4,11 @@ import pandas as pd
 from utils import klinesFilter
 import re
 
-
 # IMPORT DATA SOURCES
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df,tf='1h')
-df = df.iloc[33000:]
+df = df.iloc[30000:]
 start_date = df.index[0]
 end_date = df.index[-1]
 pairNamePattern = re.compile('[A-Z]{6,}')
@@ -23,8 +22,8 @@ sl_long = 0.9
 sl_short = 1.01 """
 
 P = Population(
-	generation_size = 25,
-	n_genes = 9,
+	generation_size = 50,
+	n_genes = len(gene_ranges), # 9
 	gene_ranges = [
 		(20, 100),	# bb_len
 		(10, 30),	# n_std
@@ -39,11 +38,20 @@ P = Population(
 	n_best = 5,
 	mutation_rate = 0.1,
 
-	initial_balance = 1000,
-	leverage = 5,
-	trailing_stop_loss = False,
-	entry_amount_p = 0.05
+	initial_balance = 1000, # parametric: (1,10) then map(x,y *100 or 1000) ok
+	leverage = 5, # parametric: (1,20) ok
+	trailing_stop_loss = False, # parametric: (0,1) boolean ok
+	entry_amount_p = 0.05 # parametric: (1, 100) then divide /100
 	)
+"""
+Los  siguientes parámetros:
+	initial_balance
+	leverage
+	trailing_stop_loss
+	entry_amount_p
+podrían ser ingresados al sorteo si es que, se hace por etapas.
+Digamos que son parámetros de 2da (experimentales)
+"""
 population = P.population
 number_of_generations = 5
 
@@ -92,13 +100,18 @@ for x in range(number_of_generations):
 		start_date = start_date,
 		end_date = end_date
 	)
+	best['genes'] = population[0].genes
 	worst = population[-1].backtester.return_results(
 		symbol = symbol,
 		start_date = start_date,
 		end_date = end_date
 	)
 	output_best = pd.DataFrame.from_dict(best, orient='index')
+	output_best = output_best.round(decimals=2) #porque no refleja la modificación ??
 	output_worst = pd.DataFrame.from_dict(worst, orient='index')
+
+	# PERSISTENCIA
+	best
 
 	print(f''' GENERATION: {x}
 	________________________________________
@@ -120,6 +133,22 @@ for x in range(number_of_generations):
 	''')
 
 	the_bests.append( best )
+
+import pymongo
+from pymongo import MongoClient
+from datetime import datetime
+
+# PERSISTENCIA
+client = MongoClient()
+db = client.backtest
+collection = db.semillitasBest
+# document = best
+documents = the_bests
+# collection.insert_one( document )
+
+result = collection.insert_many( documents )
+result.inserted_ids
+
 
 # BEST RESULT FROM EVOLUTION
 print(
