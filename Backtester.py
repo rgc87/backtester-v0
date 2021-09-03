@@ -142,7 +142,14 @@ class Backtester():
 		return results
 
 
-	def __backtesting__(self, df, strategy, tp_long, tp_short, sl_long, sl_short):
+	def __backtesting__(self,
+						df,
+						strategy,
+						tp_long,
+						tp_short,
+						sl_long,
+						sl_short
+						):
 		high = df['high']
 		close = df['close']
 		low = df['low']

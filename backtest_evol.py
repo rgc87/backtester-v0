@@ -37,7 +37,12 @@ P = Population(
 		(1,6)		# sl_short
 	],
 	n_best = 5,
-	mutation_rate = 0.1
+	mutation_rate = 0.1,
+
+	initial_balance = 1000,
+	leverage = 5,
+	trailing_stop_loss = False,
+	entry_amount_p = 0.05
 	)
 population = P.population
 number_of_generations = 5
@@ -107,10 +112,11 @@ for x in range(number_of_generations):
 	rsi_overbought, rsi_oversold
 	tp_long, tp_short
 	sl_long, sl_short
-
+	\n
 	WORST INDIVIDUAL:
 	{output_worst}
 	{population[-1].genes}
+
 	''')
 
 	the_bests.append( best )
@@ -120,5 +126,8 @@ print(
 	'*** *** *** *** *** BETTER RESULT OVERALL *** *** *** *** *** ',
 	pd.DataFrame.from_dict(
 		max( the_bests, key= lambda x: x['profit_after_fees'] ),
-		orient='index')
+		orient='index'),
+	'\n\n\n',
+	'*** END ***'
+	'\n\n\n',
 )

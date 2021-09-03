@@ -3,27 +3,47 @@ from Backtester import Backtester
 
 
 class Individual:
-	def __init__(self, n_genes, gene_ranges):
+	def __init__(self, n_genes, gene_ranges,
+				initial_balance,
+				leverage,
+				trailing_stop_loss,
+				entry_amount_p
+	):
 		self.genes = [
 			np.random.randint(
 				gene_ranges[x][0] , gene_ranges[x][1]
 			) for x in range(n_genes)]
 		self.backtester = Backtester(
-			initial_balance = 1000,
-			leverage = 5,
-			trailing_stop_loss = False,
-			entry_amount_p = 0.05
+			initial_balance =	initial_balance,
+			leverage = leverage,
+			trailing_stop_loss = trailing_stop_loss,
+			entry_amount_p = entry_amount_p
 			)
 
 
 class Population:
-	def __init__(self, generation_size, n_genes, gene_ranges, n_best, mutation_rate):
-		self.population = [Individual(n_genes, gene_ranges) for _ in range(generation_size)]
+	def __init__(self, generation_size, n_genes, gene_ranges, n_best, mutation_rate,
+				initial_balance,leverage, trailing_stop_loss, entry_amount_p
+	):
+		self.population = [
+							Individual(	n_genes,
+										gene_ranges,
+										initial_balance,
+										leverage,
+										trailing_stop_loss,
+										entry_amount_p
+							)
+							for _ in range(generation_size)
+		]
 		self.n_genes = n_genes
 		self.gene_ranges = gene_ranges
 		self.n_best = n_best
 		self.generation_size = generation_size
 		self.mutation_rate = mutation_rate
+		self.initial_balance = initial_balance
+		self.leverage = leverage,
+		self.trailing_stop_loss = trailing_stop_loss,
+		self.entry_amount_p = entry_amount_p
 
 	def selection(self):
 		return sorted(
