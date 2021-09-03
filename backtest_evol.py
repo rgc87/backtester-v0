@@ -22,8 +22,8 @@ sl_long = 0.9
 sl_short = 1.01 """
 
 P = Population(
-	generation_size = 50,
-	n_genes = len(gene_ranges), # 9
+	generation_size = 25,
+	n_genes = 9,
 	gene_ranges = [
 		(20, 100),	# bb_len
 		(10, 30),	# n_std
@@ -53,7 +53,7 @@ podrían ser ingresados al sorteo si es que, se hace por etapas.
 Digamos que son parámetros de 2da (experimentales)
 """
 population = P.population
-number_of_generations = 5
+number_of_generations = 500
 
 print(f'''GENETIC ALGORITHM TO OPTIMIZE QUANT STRATEGY
 BOLLINGER BANDS - RSI
@@ -118,13 +118,9 @@ for x in range(number_of_generations):
 	BEST INDIVIDUAL:
 	{output_best}
 
-	{(population[0].genes)[0:5]}
-	{list( map( lambda x: x/100 , (population[0].genes)[5:9] ) )}
-
 	bb_len, n_std, rsi_len,
 	rsi_overbought, rsi_oversold
-	tp_long, tp_short
-	sl_long, sl_short
+	tp_long, tp_short, sl_long, sl_short
 	\n
 	WORST INDIVIDUAL:
 	{output_worst}

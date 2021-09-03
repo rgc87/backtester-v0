@@ -22,7 +22,7 @@ class Individual:
 
 
 class Population:
-	def __init__(self, generation_size, n_genes, gene_ranges, n_best, mutation_rate,
+	def __init__(self, generation_size, n_genes, gene_ranges,  n_best, mutation_rate,
 				initial_balance,leverage, trailing_stop_loss, entry_amount_p
 	):
 		self.population = [
