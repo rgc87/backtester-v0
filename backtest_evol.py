@@ -8,8 +8,8 @@ import re
 # IMPORT DATA SOURCES
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
-df = klinesFilter(df)
-df = df.iloc[20000:]
+df = klinesFilter(df,tf='1h')
+df = df.iloc[33000:]
 start_date = df.index[0]
 end_date = df.index[-1]
 pairNamePattern = re.compile('[A-Z]{6,}')
@@ -17,24 +17,24 @@ symbol = pairNamePattern.search(pathFile).group()
 timeframe = '1h'
 
 # BACKTEST PARAMETERS
-tp_long = 1.025
+""" tp_long = 1.025
 tp_short = 0.975
 sl_long = 0.9
-sl_short = 1.01
+sl_short = 1.01 """
 
 P = Population(
 	generation_size = 25,
-	n_genes = 5,
+	n_genes = 9,
 	gene_ranges = [
 		(20, 100),	# bb_len
 		(10, 30),	# n_std
-		(8, 100),	# rsi_len
-		(50, 100),	# rsi_overbought
-		(0, 50)		# rsi_oversold
-		# tp_long
-		# tp_short
-		# sl_long
-		# sl_short
+		(5, 50),	# rsi_len
+		(60, 95),	# rsi_overbought
+		(20, 50),	# rsi_oversold
+		(2,10),		# tp_long
+		(2,10),		# tp_short
+		(1,6),		# sl_long
+		(1,6)		# sl_short
 	],
 	n_best = 5,
 	mutation_rate = 0.1
@@ -60,14 +60,16 @@ for x in range(number_of_generations):
 			rsi_overbought 	= 	genes[3],
 			rsi_oversold 	= 	genes[4]
 		)
+
 		strategy.setUp(df)
+
 		individual.backtester.__backtesting__(
 			df,
 			strategy,
-			tp_long,
-			tp_short,
-			sl_long,
-			sl_short
+			tp_long			= genes[5]/100, # step -> 1/100 -> 0.001 -> 0.1%
+			tp_short		= genes[6]/100,
+			sl_long			= genes[7]/100,
+			sl_short		= genes[8]/100
 		)
 	P.crossover()
 	P.mutation()
@@ -97,8 +99,14 @@ for x in range(number_of_generations):
 	________________________________________
 	BEST INDIVIDUAL:
 	{output_best}
-	{population[0].genes}
-	bb_len, n_std, rsi_len, rsi_overbought, rsi_oversold
+
+	{(population[0].genes)[0:5]}
+	{list( map( lambda x: x/100 , (population[0].genes)[5:9] ) )}
+
+	bb_len, n_std, rsi_len,
+	rsi_overbought, rsi_oversold
+	tp_long, tp_short
+	sl_long, sl_short
 
 	WORST INDIVIDUAL:
 	{output_worst}
@@ -109,7 +117,7 @@ for x in range(number_of_generations):
 
 # BEST RESULT FROM EVOLUTION
 print(
-	'*** *** BETTER RESULT OVERALL *** ***',
+	'*** *** *** *** *** BETTER RESULT OVERALL *** *** *** *** *** ',
 	pd.DataFrame.from_dict(
 		max( the_bests, key= lambda x: x['profit_after_fees'] ),
 		orient='index')

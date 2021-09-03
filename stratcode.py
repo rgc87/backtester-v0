@@ -7,12 +7,20 @@ class BBStrategy:
 				rsi_len,
 				rsi_overbought,
 				rsi_oversold
+				# tp_long,
+				# tp_short,
+				# sl_long,
+				# sl_short
 	):
 		self.bb_len = bb_len
 		self.n_std = n_std
 		self.rsi_len = rsi_len
 		self.rsi_overbought = rsi_overbought
 		self.rsi_oversold = rsi_oversold
+		# self.tp_long = tp_long
+		# self.tp_short = tp_short
+		# self.sl_long = sl_long
+		# self.sl_short = sl_short
 
 	def setUp(self, df):
 		bb = ta.bbands(
@@ -48,7 +56,3 @@ class BBStrategy:
 			return True
 		return False
 
-
-""" class otra:
-	def __init__(self):
-		pass """
