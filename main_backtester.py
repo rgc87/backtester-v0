@@ -9,7 +9,7 @@ import re
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df, tf='1h')
-df = df.iloc[33000:]
+df = df.iloc[20000:-1]
 
 start_date = df.index[0]
 end_date = df.index[-1]
@@ -24,16 +24,16 @@ pairNamePattern = re.compile('[A-Z]{6,}')
 symbol = pairNamePattern.search(pathFile).group()
 
 # STRATEGY SETUP
-bb_len = 88
-n_std = 2.8
-rsi_len = 9
-rsi_overbought = 88
-rsi_oversold = 22
+bb_len = 58
+n_std = 2.0
+rsi_len = 34
+rsi_overbought = 75
+rsi_oversold = 40
 
-tp_long = 1.025
-tp_short = 0.975
-sl_long = 0.9
-sl_short = 1.01
+tp_long =   9/100   #1.05
+tp_short =   4/100   #0.096
+sl_long =   3/100   #0.098
+sl_short =  1/100
 
 strategy = BBStrategy(
     bb_len,
@@ -46,9 +46,10 @@ strategy.setUp(df)
 
 # BACKTEST ATRIBUTES
 initial_balance = 1000
-leverage = 10
+leverage = 1
 trailing_stop_loss = False
 entry_amount_p = 0.05
+
 tryback = Backtester(
     initial_balance,
     leverage,

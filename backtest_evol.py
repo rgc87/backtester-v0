@@ -1,4 +1,4 @@
-from GA import Population
+from GenAlgo import Population
 from stratcode import BBStrategy
 import pandas as pd
 from utils import klinesFilter
@@ -25,15 +25,15 @@ P = Population(
 	generation_size = 25,
 	n_genes = 9,
 	gene_ranges = [
-		(20, 100),	# bb_len
-		(10, 30),	# n_std
-		(5, 50),	# rsi_len
-		(60, 95),	# rsi_overbought
-		(20, 50),	# rsi_oversold
-		(2,10),		# tp_long
-		(2,10),		# tp_short
-		(1,6),		# sl_long
-		(1,6)		# sl_short
+		(40, 60),	# bb_len 			(20, 100)
+		(15, 25),	# n_std 			(10, 30)
+		(14, 40),	# rsi_len         	(5, 50)
+		(75, 95),	# rsi_overbought    (60, 95)
+		(25, 50),	# rsi_oversold      (20, 50)
+		(5,10),		# tp_long         	(2,10)
+		(2,6),		# tp_short         	(2,10)
+		(1,4),		# sl_long         	(1,6)
+		(1,4)		# sl_short         	(1,6)
 	],
 	n_best = 5,
 	mutation_rate = 0.1,
@@ -53,7 +53,7 @@ podrían ser ingresados al sorteo si es que, se hace por etapas.
 Digamos que son parámetros de 2da (experimentales)
 """
 population = P.population
-number_of_generations = 500
+number_of_generations = 10
 
 print(f'''GENETIC ALGORITHM TO OPTIMIZE QUANT STRATEGY
 BOLLINGER BANDS - RSI
@@ -110,8 +110,8 @@ for x in range(number_of_generations):
 	output_best = output_best.round(decimals=2) #porque no refleja la modificación ??
 	output_worst = pd.DataFrame.from_dict(worst, orient='index')
 
-	# PERSISTENCIA
-	best
+	# *** *** PERSISTENCIA *** ***
+	persistOnMongo = False
 
 	print(f''' GENERATION: {x}
 	________________________________________
@@ -130,21 +130,21 @@ for x in range(number_of_generations):
 
 	the_bests.append( best )
 
-import pymongo
-from pymongo import MongoClient
-from datetime import datetime
+if persistOnMongo:
+	import pymongo
+	from pymongo import MongoClient
+	from datetime import datetime
 
-# PERSISTENCIA
-client = MongoClient()
-db = client.backtest
-collection = db.semillitasBest
-# document = best
-documents = the_bests
-# collection.insert_one( document )
+	# PERSISTENCIA
+	client = MongoClient()
+	db = client.backtest
+	collection = db.semillitasBest
+	# document = best
+	documents = the_bests
+	# collection.insert_one( document )
 
-result = collection.insert_many( documents )
-result.inserted_ids
-
+	result = collection.insert_many( documents )
+	result.inserted_ids
 
 # BEST RESULT FROM EVOLUTION
 print(
