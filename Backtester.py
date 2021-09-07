@@ -33,9 +33,6 @@ class Backtester():
 		self.trailing_stop_loss = trailing_stop_loss
 		self.from_opened = 0
 
-		self.isEntry = False
-		self.isExit = False
-
 		self.showBinnacle = False
 		self.plotSomething = True
 		self.archive = []
@@ -295,6 +292,7 @@ class Backtester():
 			# *** RESET VALUES ***
 
 
+		# *** *** *** *** *** SHOW BINNACLE *** *** *** *** ***
 		if self.showBinnacle:
 			# print( len(self.archive) )
 			for b in self.archive:
@@ -305,6 +303,9 @@ class Backtester():
 		for b in self.archive:
 			balances.append( b['balance'][0] )
 		df['c_balances'] = balances
+
+		# *** *** *** *** *** SHOW BINNACLE *** *** *** *** ***
+
 
 		#	***	***	*** PLOT *** ***	#
 		if self.plotSomething:
@@ -319,12 +320,12 @@ class Backtester():
 			root = tkinter.Tk()
 			root.wm_title("Embedding in Tk")
 
-			# desde aqui va el código
+			# desde aqui va el código *** *** ***
 
-			fig = Figure(figsize=(5, 4), dpi=100)			# *** ***
-			fig.add_subplot(111).plot( df['c_balances'] )   # *** ***
+			fig = Figure(figsize=(5, 4), dpi=100)
+			fig.add_subplot(111).plot( df['c_balances'] )
 
-			# hasta aqui va el código
+			# hasta aqui va el código *** *** ***
 
 			canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
 			canvas.draw()
