@@ -10,7 +10,7 @@ class Backtester():
 				entry_amount_p
 	):
 		self.initial_balance = initial_balance
-		self.balance = initial_balance # *100 if 1,2,3 -> 100,200,300 (1,3) ~ *1000 if 1,2,3 -> 1000,2000,3000 ...
+		self.balance = initial_balance
 		self.amount = 0
 		self.leverage = leverage
 		self.fee_cost = 0.02 / 100	#Binance
@@ -36,22 +36,24 @@ class Backtester():
 		self.isEntry = False
 		self.isExit = False
 
-		self.showBinnacle = True
-		self.plotSomething = False
+		self.showBinnacle = False
+		self.plotSomething = True
 		self.archive = []
 		self.binnacle ={
 				'indexID' : int(),
-				'operation result' : [],
+				'operation type' : [],		# long/short
+				'operation result' : [], 	# win/loss
 				'flag' : [],
-				'operation type' : [],
-				'balance' : [],	# curre
-				'op_close result' : [],
+				'balance' : [],
+				'P_&_L' : [],
 				'tp' : [],
 				'sl' : [],
 				'entry price' : [],
-				'hlc' : [],
-				'entry amount' : [] 	# [usd, btc]
+				'exit price' : [],
+				'entry amount' : [], 	# [usd, btc]
+				'hlc' : []
 				# "on market" : bool(),
+				,' *** *** end of line *** *** ' : ' *** *** *** *** ***'
 		}
 
 
@@ -147,6 +149,7 @@ class Backtester():
 		self.take_profit_price = 0
 		self.stop_loss_price = 0
 		self.binnacle['flag'].append('from close_position()')
+
 
 
 	def set_take_profit(self, price, tp_long, tp_short):
@@ -260,91 +263,96 @@ class Backtester():
 			self.binnacle['indexID']= i
 			self.binnacle['balance'].append(self.balance)
 
+			# Profit and loss when exit operations
 			if len(self.binnacle['balance'])>1:
 				if self.binnacle['balance'][0] < self.binnacle['balance'][1]:
-					self.binnacle['op_close result'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
+					self.binnacle['P_&_L'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
 				elif self.binnacle['balance'][0] > self.binnacle['balance'][1]:
-					self.binnacle['op_close result'].append( self.binnacle['balance'][0] - self.binnacle['balance'][1] )
+					self.binnacle['P_&_L'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
+			self.binnacle['balance'].remove( self.binnacle['balance'][0] )
 
-			if self.isEntry:
-				pass
-			elif self.isExit:
-				pass
+			# Show exit price
+			if len(self.binnacle['operation type']) > 0:
+				if self.binnacle['operation type'][0] == 'from close_position( is exit )':
+					self.binnacle['exit price'].append( close[i] )
 
-			if self.showBinnacle:
-				if self.binnacle['indexID'] > 15000:
-					for k,v in self.binnacle.items():
-						print(k,'\t',v)
-					self.binnacle[' *** *** end *** *** '] = ' *** *** of line *** *** '
-
-			### *** ***		BINNACLE REGISTER 	***	 ***
-
-
-					#	***	***	*** PLOT *** ***	#
-			#plot something
-			if self.plotSomething:
-				import tkinter
-
-				from matplotlib.backends.backend_tkagg import (
-				    FigureCanvasTkAgg, NavigationToolbar2Tk)
-				# Implement the default Matplotlib key bindings.
-				from matplotlib.backend_bases import key_press_handler
-				from matplotlib.figure import Figure
-
-				root = tkinter.Tk()
-				root.wm_title("Embedding in Tk")
-
-				# desde aqui va el código
-
-				fig = Figure(figsize=(5, 4), dpi=100)
-				fig.add_subplot(111).plot(close)
-
-				# hasta aqui va el código
-				canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
-				canvas.draw()
-				canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-				toolbar = NavigationToolbar2Tk(canvas, root)
-				toolbar.update()
-				canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
-
-				def on_key_press(event):
-				    print("you pressed {}".format(event.key))
-				    key_press_handler(event, canvas, toolbar)
-
-
-				canvas.mpl_connect("key_press_event", on_key_press)
-
-
-				def _quit():
-				    root.quit()     # stops mainloop
-				    #root.destroy()  # this is necessary on Windows to prevent
-				                    # Fatal Python Error: PyEval_RestoreThread: NULL tstate
-
-
-				button = tkinter.Button(master=root, text="Quit", command=_quit)
-				button.pack(side=tkinter.BOTTOM)
-
-				tkinter.mainloop()
-				# If you put root.destroy() here, it will cause an error if the window is
-				# closed with the window manager.
-					#	***	***	*** PLOT *** ***	#
+			self.archive.append( self.binnacle.copy() )
+			### *** ***		BINNACLE REGISTER 	***	 *** end *** ***
 
 
 			# *** RESET VALUES ***
+			self.binnacle['operation type'] = []
 			self.binnacle['operation result'] = []
 			self.binnacle['flag'] = []
-			self.binnacle['operation type'] = []
 			self.binnacle['balance'] = []
-			self.binnacle['op_close result'] = []
+			self.binnacle['P_&_L'] = []
 			self.binnacle['tp'] = []
 			self.binnacle['sl'] = []
 			self.binnacle['entry price'] = []
-			self.binnacle['hlc'] = []
+			self.binnacle['exit price'] = []
 			self.binnacle['entry amount'] = []
-
+			self.binnacle['hlc'] = []
 			# *** RESET VALUES ***
 
 
-		# *** *** *** ***
+		if self.showBinnacle:
+			# print( len(self.archive) )
+			for b in self.archive:
+				if b['indexID'] > 15000:
+					for k,v in b.items():
+						print(k,'\t',v)
+		balances = []
+		for b in self.archive:
+			balances.append( b['balance'][0] )
+		df['c_balances'] = balances
+
+		#	***	***	*** PLOT *** ***	#
+		if self.plotSomething:
+			import tkinter
+
+			from matplotlib.backends.backend_tkagg import (
+				FigureCanvasTkAgg, NavigationToolbar2Tk)
+			# Implement the default Matplotlib key bindings.
+			from matplotlib.backend_bases import key_press_handler
+			from matplotlib.figure import Figure
+
+			root = tkinter.Tk()
+			root.wm_title("Embedding in Tk")
+
+			# desde aqui va el código
+
+			fig = Figure(figsize=(5, 4), dpi=100)			# *** ***
+			fig.add_subplot(111).plot( df['c_balances'] )   # *** ***
+
+			# hasta aqui va el código
+
+			canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
+			canvas.draw()
+			canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+
+			toolbar = NavigationToolbar2Tk(canvas, root)
+			toolbar.update()
+			canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+
+
+			def on_key_press(event):
+				print("you pressed {}".format(event.key))
+				key_press_handler(event, canvas, toolbar)
+
+
+			canvas.mpl_connect("key_press_event", on_key_press)
+
+
+			def _quit():
+				root.quit()     # stops mainloop
+				#root.destroy()  # this is necessary on Windows to prevent
+								# Fatal Python Error: PyEval_RestoreThread: NULL tstate
+
+
+			button = tkinter.Button(master=root, text="Quit", command=_quit)
+			button.pack(side=tkinter.BOTTOM)
+
+			tkinter.mainloop()
+			# If you put root.destroy() here, it will cause an error if the window is
+			# closed with the window manager.
+			#	***	***	*** PLOT *** ***	#
