@@ -16,8 +16,10 @@ class Individual:
 			initial_balance =	initial_balance,
 			leverage = leverage,
 			trailing_stop_loss = trailing_stop_loss,
-			entry_amount_p = entry_amount_p
-			)
+			entry_amount_p = entry_amount_p,
+			showBinnacle=False,
+			plotOnNewWindow=False
+		)
 
 
 class Population:

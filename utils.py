@@ -39,3 +39,20 @@ def klinesFilter(df, tf):
     df.set_index(['open time'], inplace=True)
     df.drop(['ignore'], axis=1, inplace=True)
     return df
+
+
+# Esto será un decorador
+def plotOnNewWindow(archive):
+    """
+    "Archive" será la lista de diccionarios,
+    pasada como argumento dentro del método __backtesting__,
+    que es el retorno de la funcion(archive) !!
+    """
+    def openTkinter(binnacles):
+        """El argumento "df" es pasado
+        dentro del método __backtesting__
+
+        """
+        #ploteo
+        pass
+    return openTkinter()

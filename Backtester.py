@@ -7,7 +7,9 @@ class Backtester():
 				initial_balance,
 				leverage,
 				trailing_stop_loss,
-				entry_amount_p
+				entry_amount_p,
+				showBinnacle,
+				plotOnNewWindow
 	):
 		self.initial_balance = initial_balance
 		self.balance = initial_balance
@@ -33,11 +35,17 @@ class Backtester():
 		self.trailing_stop_loss = trailing_stop_loss
 		self.from_opened = 0
 
-		self.showBinnacle = False
-		self.plotSomething = True
+		self.margin_edge = 100
+		self.margin_rate = 1-((self.margin_edge - self.leverage) / self.leverage) / 100
+
+
+		self.showBinnacle = showBinnacle
+		self.plotOnNewWindow = plotOnNewWindow
 		self.archive = []
 		self.binnacle ={
 				'indexID' : int(),
+				'orderID'	:	0,
+				'timestamp' : str(),
 				'operation type' : [],		# long/short
 				'operation result' : [], 	# win/loss
 				'flag' : [],
@@ -45,13 +53,44 @@ class Backtester():
 				'P_&_L' : [],
 				'tp' : [],
 				'sl' : [],
-				'entry price' : [],
+				'entry price' : int(),
 				'exit price' : [],
 				'entry amount' : [], 	# [usd, btc]
+				'leverage' : self.leverage, 	# [usd, btc]
+				'liquidation price' : 1, 	# [usd, btc]
 				'hlc' : []
 				# "on market" : bool(),
-				,' *** *** end of line *** *** ' : ' *** *** *** *** ***'
+				,' *** *** end of line *** *** ' : ' *** *** *** *** '
 		}
+
+	#  @plotOnNewWindow
+			#  def archiveManager(self, binnacle):
+			# 		return binnacles
+
+
+	def saveAndClearBinn(self):
+		# Storage dictionary on a list
+		self.archive.append( self.binnacle.copy() )
+		# Reset values
+		self.binnacle['timestamp'] = str()
+		self.binnacle['operation type'] = []
+		self.binnacle['operation result'] = []
+		self.binnacle['flag'] = []
+		self.binnacle['balance'] = []
+		self.binnacle['P_&_L'] = []
+		self.binnacle['tp'] = []
+		self.binnacle['sl'] = []
+		self.binnacle['entry price'] = int()
+		self.binnacle['exit price'] = []
+		self.binnacle['entry amount'] = []
+		self.binnacle['liquidation price'] = 1
+		self.binnacle['hlc'] = []
+
+
+	def parseArchives(self,archive):
+		# recibe la lista y retorna un pandas DF ??
+		# df = pd.DataFrame(data='' , columns=' ')
+		pass
 
 
 	def reset_results(self):
@@ -73,6 +112,7 @@ class Backtester():
 		self.num_operations += 1 #será necesario contar los cierres de esta forma ?
 		self.isEntry = True
 		self.binnacle['operation type'].append('from open_position( is entry )')
+		self.binnacle['orderID'] += 1
 		if side == 'long':
 			self.num_longs += 1
 			self.binnacle['operation type'].append('from open_position( is Long )')
@@ -84,7 +124,6 @@ class Backtester():
 				self.long_open_price = (self.long_open_price + price)/2
 				self.amount += self.entry_amount/price
 				self.binnacle['flag'].append('from open_position( pyramid )')
-
 			else:
 				self.is_long_open = True
 				self.long_open_price = price
@@ -111,7 +150,6 @@ class Backtester():
 
 		if self.trailing_stop_loss:
 			self.from_opened = from_opened
-		self.binnacle['flag'].append('from open_position()')
 
 
 	def close_position(self, price):
@@ -145,7 +183,6 @@ class Backtester():
 
 		self.take_profit_price = 0
 		self.stop_loss_price = 0
-		self.binnacle['flag'].append('from close_position()')
 
 
 
@@ -207,13 +244,19 @@ class Backtester():
 		high = df['high']
 		close = df['close']
 		low = df['low']
+
 		for i in range(len(df)): #probar con itertuples()
+
 			if self.balance > 0:
 				self.binnacle['balance'].append(self.balance)
 				self.binnacle['hlc'].append([high[i], low[i], close[i]])
+
 				if strategy.checkLongSignal(i):
 					self.open_position(price = close[i], side = 'long', from_opened = i)
-					self.binnacle['entry price'].append( close[i] ) # *** buy long price / enter long price
+
+					self.binnacle['entry price'] = close[i] # *** buy long price / enter long price
+					self.margin_call = self.margin_rate * self.binnacle['entry price']
+					self.binnacle['liquidation price'] = self.margin_call
 					self.binnacle['entry amount'].append(self.amount)
 					self.binnacle['entry amount'].append(self.amount * close[i])
 
@@ -222,8 +265,12 @@ class Backtester():
 
 				elif strategy.checkShortSignal(i):
 					self.open_position(price = close[i], side = 'short', from_opened = i)
-					self.binnacle['entry price'].append( close[i] ) # *** buy long price / enter short price
+
+					self.binnacle['entry price'] = close[i] # *** buy short price / enter short price
+					self.margin_call = (self.margin_rate+1) * self.binnacle['entry price']
+					self.binnacle['liquidation price'] = self.margin_call
 					self.binnacle['entry amount'].append(self.amount)
+					self.binnacle['entry amount'].append(self.amount * close[i])
 
 					self.set_take_profit(price = close[i], tp_long=tp_long, tp_short=tp_short)
 					self.set_stop_loss(price = close[i], sl_long=sl_long, sl_short=sl_short)
@@ -256,11 +303,12 @@ class Backtester():
 			else:
 				print('*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***')
 
-			### *** ***		BINNACLE REGISTER 	***	 ***
+			# *** *** BINNACLE REGISTER start	***
 			self.binnacle['indexID']= i
-			self.binnacle['balance'].append(self.balance)
+			self.binnacle['timestamp'] = df.index[i]
+			self.binnacle['balance'].append(self.balance) #balance after operations
 
-			# Profit and loss when exit operations
+			# *** Profit and loss when exit operations
 			if len(self.binnacle['balance'])>1:
 				if self.binnacle['balance'][0] < self.binnacle['balance'][1]:
 					self.binnacle['P_&_L'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
@@ -268,64 +316,82 @@ class Backtester():
 					self.binnacle['P_&_L'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
 			self.binnacle['balance'].remove( self.binnacle['balance'][0] )
 
-			# Show exit price
+			# *** Show exit price , orderID
 			if len(self.binnacle['operation type']) > 0:
 				if self.binnacle['operation type'][0] == 'from close_position( is exit )':
 					self.binnacle['exit price'].append( close[i] )
 
-			self.archive.append( self.binnacle.copy() )
-			### *** ***		BINNACLE REGISTER 	***	 *** end *** ***
+			if self.is_long_open:
+				if close[i] <= self.binnacle['liquidation price']:
+					print('marginCALL',' index: ', i)
+			elif self.is_short_open:
+				if close[i] >= self.binnacle['liquidation price']:
+					print('marginCALL',' index: ', i)
 
-
-			# *** RESET VALUES ***
-			self.binnacle['operation type'] = []
-			self.binnacle['operation result'] = []
-			self.binnacle['flag'] = []
-			self.binnacle['balance'] = []
-			self.binnacle['P_&_L'] = []
-			self.binnacle['tp'] = []
-			self.binnacle['sl'] = []
-			self.binnacle['entry price'] = []
-			self.binnacle['exit price'] = []
-			self.binnacle['entry amount'] = []
-			self.binnacle['hlc'] = []
+			# *** ***	BINNACLE REGISTER END *** *** *** ***
+			self.saveAndClearBinn()
 			# *** RESET VALUES ***
 
 
-		# *** *** *** *** *** SHOW BINNACLE *** *** *** *** ***
+		# *** *** *** *** *** SHOW BINNACLE start *** *** *** *** ***
 		if self.showBinnacle:
-			# print( len(self.archive) )
+			# print(len(self.archive))
+			# print('show Binnacle function')
 			for b in self.archive:
-				if b['indexID'] > 15000:
+				if b['indexID'] > 0: # filtro
+					b['orderID'] = str(b['orderID'])+' -(mkt.entry)'
+					if len(self.binnacle['operation type']) > 0:
+						if b['operation type'][0] != 'from open_position( is entry )':
+							b['orderID'] = '_'
 					for k,v in b.items():
 						print(k,'\t',v)
+
+
+		# *** agregar columnas al dataframe
 		balances = []
 		for b in self.archive:
-			balances.append( b['balance'][0] )
-		df['c_balances'] = balances
+			try:
+				balances.append( b['balance'][0] )
+				df['c_balances'] = balances
+			except:
+				IndexError()
+				continue
+		# *** agregar columnas al dataframe
 
-		# *** *** *** *** *** SHOW BINNACLE *** *** *** *** ***
+		# *** *** *** *** *** SHOW BINNACLE end *** *** *** *** ***
 
+		"""la funcion parsea
+			resetea
+			imprime/no imprime
+		"""
 
-		#	***	***	*** PLOT *** ***	#
-		if self.plotSomething:
+		#	***	***	*** PLOT start *** ***	#
+		if self.plotOnNewWindow:
 			import tkinter
-
 			from matplotlib.backends.backend_tkagg import (
 				FigureCanvasTkAgg, NavigationToolbar2Tk)
 			# Implement the default Matplotlib key bindings.
 			from matplotlib.backend_bases import key_press_handler
 			from matplotlib.figure import Figure
 
+			def on_key_press(event):
+				print("you pressed {}".format(event.key))
+				key_press_handler(event, canvas, toolbar)
+
+			def _quit():
+				root.quit()     # stops mainloop
+				#root.destroy()  # this is necessary on Windows to prevent
+								# Fatal Python Error: PyEval_RestoreThread: NULL tstate
+
 			root = tkinter.Tk()
 			root.wm_title("Embedding in Tk")
 
-			# desde aqui va el código *** *** ***
+				# *** *** *** desde aqui va el código *** *** ***
 
 			fig = Figure(figsize=(5, 4), dpi=100)
 			fig.add_subplot(111).plot( df['c_balances'] )
 
-			# hasta aqui va el código *** *** ***
+				# *** *** *** HASTA quí *** *** ***
 
 			canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
 			canvas.draw()
@@ -335,20 +401,7 @@ class Backtester():
 			toolbar.update()
 			canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-
-			def on_key_press(event):
-				print("you pressed {}".format(event.key))
-				key_press_handler(event, canvas, toolbar)
-
-
 			canvas.mpl_connect("key_press_event", on_key_press)
-
-
-			def _quit():
-				root.quit()     # stops mainloop
-				#root.destroy()  # this is necessary on Windows to prevent
-								# Fatal Python Error: PyEval_RestoreThread: NULL tstate
-
 
 			button = tkinter.Button(master=root, text="Quit", command=_quit)
 			button.pack(side=tkinter.BOTTOM)
@@ -356,4 +409,4 @@ class Backtester():
 			tkinter.mainloop()
 			# If you put root.destroy() here, it will cause an error if the window is
 			# closed with the window manager.
-			#	***	***	*** PLOT *** ***	#
+			#	***	***	*** PLOT end *** ***	#

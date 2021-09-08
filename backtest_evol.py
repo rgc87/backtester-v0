@@ -15,31 +15,25 @@ pairNamePattern = re.compile('[A-Z]{6,}')
 symbol = pairNamePattern.search(pathFile).group()
 timeframe = '1h'
 
-# BACKTEST PARAMETERS
-""" tp_long = 1.025
-tp_short = 0.975
-sl_long = 0.9
-sl_short = 1.01 """
-
 P = Population(
 	generation_size = 25,
 	n_genes = 9,
 	gene_ranges = [
 		(40, 60),	# bb_len 			(20, 100)
 		(15, 25),	# n_std 			(10, 30)
-		(14, 40),	# rsi_len         	(5, 50)
-		(75, 95),	# rsi_overbought    (60, 95)
-		(25, 50),	# rsi_oversold      (20, 50)
-		(5,10),		# tp_long         	(2,10)
-		(2,6),		# tp_short         	(2,10)
-		(1,4),		# sl_long         	(1,6)
-		(1,4)		# sl_short         	(1,6)
+		(20, 35),	# rsi_len         	(5, 50)
+		(75, 85),	# rsi_overbought    (60, 95)
+		(30, 50),	# rsi_oversold      (20, 50)
+		(3,10),		# tp_long         	(2,10)
+		(3,10),		# tp_short         	(2,10)
+		(1,5),		# sl_long         	(1,6)
+		(1,5)		# sl_short         	(1,6)
 	],
 	n_best = 5,
 	mutation_rate = 0.1,
 
 	initial_balance = 1000, # parametric: (1,10) then map(x,y *100 or 1000) ok
-	leverage = 5, # parametric: (1,20) ok
+	leverage = 1, # parametric: (1,20) ok
 	trailing_stop_loss = False, # parametric: (0,1) boolean ok
 	entry_amount_p = 0.05 # parametric: (1, 100) then divide /100
 	)
@@ -53,12 +47,11 @@ podrían ser ingresados al sorteo si es que, se hace por etapas.
 Digamos que son parámetros de 2da (experimentales)
 """
 population = P.population
-number_of_generations = 10
+number_of_generations = 25
 
 print(f'''GENETIC ALGORITHM TO OPTIMIZE QUANT STRATEGY
 BOLLINGER BANDS - RSI
-SYMBOL: {symbol} ~ TIMEFRAME: {timeframe}
-''')
+SYMBOL: {symbol} ~ TIMEFRAME: {timeframe}''')
 
 the_bests = []
 for x in range(number_of_generations):
@@ -79,10 +72,10 @@ for x in range(number_of_generations):
 		individual.backtester.__backtesting__(
 			df,
 			strategy,
-			tp_long			= genes[5]/100, # step -> 1/100 -> 0.001 -> 0.1%
+			tp_long			= (genes[5]/100)+1, # step -> 1/100 -> 0.001 -> 0.1%
 			tp_short		= genes[6]/100,
 			sl_long			= genes[7]/100,
-			sl_short		= genes[8]/100
+			sl_short		= (genes[8]/100)+1
 		)
 	P.crossover()
 	P.mutation()
@@ -107,13 +100,13 @@ for x in range(number_of_generations):
 		end_date = end_date
 	)
 	output_best = pd.DataFrame.from_dict(best, orient='index')
-	output_best = output_best.round(decimals=2) #porque no refleja la modificación ??
 	output_worst = pd.DataFrame.from_dict(worst, orient='index')
 
 	# *** *** PERSISTENCIA *** ***
 	persistOnMongo = False
 
-	print(f''' GENERATION: {x}
+	print(f'''
+	GENERATION: {x}
 	________________________________________
 	BEST INDIVIDUAL:
 	{output_best}
@@ -121,12 +114,10 @@ for x in range(number_of_generations):
 	bb_len, n_std, rsi_len,
 	rsi_overbought, rsi_oversold
 	tp_long, tp_short, sl_long, sl_short
-	\n
+
 	WORST INDIVIDUAL:
 	{output_worst}
-	{population[-1].genes}
-
-	''')
+	{population[-1].genes}''')
 
 	the_bests.append( best )
 
@@ -152,7 +143,6 @@ print(
 	pd.DataFrame.from_dict(
 		max( the_bests, key= lambda x: x['profit_after_fees'] ),
 		orient='index'),
-	'\n\n\n',
+	'\n\n',
 	'*** END ***'
-	'\n\n\n',
-)
+	'\n\n')
