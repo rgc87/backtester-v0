@@ -8,7 +8,7 @@ import re
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df,tf='1h')
-df = df.iloc[30000:]
+df = df.iloc[32000:]
 start_date = df.index[0]
 end_date = df.index[-1]
 pairNamePattern = re.compile('[A-Z]{6,}')
@@ -19,13 +19,13 @@ P = Population(
 	generation_size = 25,
 	n_genes = 9,
 	gene_ranges = [
-		(40, 60),	# bb_len 			(20, 100)
+		(40, 55),	# bb_len 			(20, 100)
 		(15, 25),	# n_std 			(10, 30)
-		(20, 35),	# rsi_len         	(5, 50)
-		(75, 85),	# rsi_overbought    (60, 95)
-		(30, 50),	# rsi_oversold      (20, 50)
-		(3,10),		# tp_long         	(2,10)
-		(3,10),		# tp_short         	(2,10)
+		(25, 40),	# rsi_len         	(5, 50)
+		(60, 90),	# rsi_overbought    (60, 95)
+		(20, 50),	# rsi_oversold      (20, 50)
+		(5,10),		# tp_long         	(2,10)
+		(5,10),		# tp_short         	(2,10)
 		(1,5),		# sl_long         	(1,6)
 		(1,5)		# sl_short         	(1,6)
 	],
@@ -33,9 +33,9 @@ P = Population(
 	mutation_rate = 0.1,
 
 	initial_balance = 1000, # parametric: (1,10) then map(x,y *100 or 1000) ok
-	leverage = 1, # parametric: (1,20) ok
-	trailing_stop_loss = False, # parametric: (0,1) boolean ok
-	entry_amount_p = 0.05 # parametric: (1, 100) then divide /100
+	leverage = 5, # parametric: (1,20) ok
+	trailing_stop_loss = True, # parametric: (0,1) boolean ok
+	entry_amount_p = 0.10 # parametric: (1, 100) then divide /100
 	)
 """
 Los  siguientes parámetros:
@@ -72,10 +72,10 @@ for x in range(number_of_generations):
 		individual.backtester.__backtesting__(
 			df,
 			strategy,
-			tp_long			= (genes[5]/100)+1, # step -> 1/100 -> 0.001 -> 0.1%
-			tp_short		= genes[6]/100,
-			sl_long			= genes[7]/100,
-			sl_short		= (genes[8]/100)+1
+			tp_long			= ( genes[5] / 100 ) + 1,	 	#(9/100)+1
+			tp_short		= ( 100 - genes[6] ) / 100,		#(100-3)/100
+			sl_long			= ( 100 - genes[7] ) / 100,		#(100-1)/100
+			sl_short		= ( genes[8] / 100 ) + 1		#(4/100)+1
 		)
 	P.crossover()
 	P.mutation()

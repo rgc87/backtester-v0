@@ -32,65 +32,102 @@ class Backtester():
 		self.is_long_open = False
 		self.is_short_open = False
 
-		self.trailing_stop_loss = trailing_stop_loss
+		self.trailing_stop_loss = trailing_stop_loss #Boolean
 		self.from_opened = 0
 
 		self.margin_edge = 100
-		self.margin_rate = 1-((self.margin_edge - self.leverage) / self.leverage) / 100
+		self.margin_rate = 1-((self.margin_edge - self.leverage) / self.leverage)/100
 
-
-		self.showBinnacle = showBinnacle
-		self.plotOnNewWindow = plotOnNewWindow
-		self.archive = []
+		self.showBinnacle = showBinnacle #Boolean
+		self.plotOnNewWindow = plotOnNewWindow #Boolean
+		self.archive = [] #Store dict(binnacles)
+		self.marketSide = 'out of market'
 		self.binnacle ={
-				'indexID' : int(),
-				'orderID'	:	0,
 				'timestamp' : str(),
-				'operation type' : [],		# long/short
-				'operation result' : [], 	# win/loss
-				'flag' : [],
-				'balance' : [],
-				'P_&_L' : [],
-				'tp' : [],
-				'sl' : [],
-				'entry price' : int(),
-				'exit price' : [],
-				'entry amount' : [], 	# [usd, btc]
-				'leverage' : self.leverage, 	# [usd, btc]
-				'liquidation price' : 1, 	# [usd, btc]
-				'hlc' : []
-				# "on market" : bool(),
-				,' *** *** end of line *** *** ' : ' *** *** *** *** '
+				'indexID' : int(),
+				'orderID'	:	0, # formato: n(1:inf) -> n-enOrd | 1,2,3,...,
+				'operation type' : [],
+				'flags' : [], #se irá
+				'entry price' : 1,
+				'entry amount' : [], #[usd, btc]
+				'tp' : 1,
+				'sl' : 1,
+				'liquidation price' : 1,
+				'sub operation' : [],
+				'close price' : 1, #float
+				'operation result' : 0, #' *** *** winned/lossed *** *** ',
+				'P_&_L' : 1,
+				'balance' : [], #1 or 2 values
+				'leverage' : self.leverage,
+				'hlc' : [],
+				'market side' : self.marketSide
+				,' *** end of line *** ' : ' *** end of line *** '
 		}
 
-	#  @plotOnNewWindow
-			#  def archiveManager(self, binnacle):
-			# 		return binnacles
 
-
-	def saveAndClearBinn(self):
-		# Storage dictionary on a list
+	def saveAndClearBinnacle(self):
+		# *** Storage dictionary on a list
 		self.archive.append( self.binnacle.copy() )
-		# Reset values
+		# *** Reset values
 		self.binnacle['timestamp'] = str()
 		self.binnacle['operation type'] = []
-		self.binnacle['operation result'] = []
-		self.binnacle['flag'] = []
+		self.binnacle['sub operation'] = []
+		self.binnacle['operation result'] = 0
+		self.binnacle['flags'] = []
 		self.binnacle['balance'] = []
-		self.binnacle['P_&_L'] = []
-		self.binnacle['tp'] = []
-		self.binnacle['sl'] = []
-		self.binnacle['entry price'] = int()
-		self.binnacle['exit price'] = []
-		self.binnacle['entry amount'] = []
-		self.binnacle['liquidation price'] = 1
+		self.binnacle['P_&_L'] = 1
+		# self.binnacle['entry price'] = 1
+		self.binnacle['close price'] = 1
+		# self.binnacle['entry amount'] = [] # base , quoted
+		# self.binnacle['liquidation price'] = 1
 		self.binnacle['hlc'] = []
 
 
-	def parseArchives(self,archive):
-		# recibe la lista y retorna un pandas DF ??
-		# df = pd.DataFrame(data='' , columns=' ')
-		pass
+	def parseArchive(self):
+		for b in self.archive:
+			if b['indexID'] > 4500: #filtro temporal, para agilizar depuración
+				# *** "Out of Market", ticker ***
+				if b['tp']==0 and b['balance'][0]==b['balance'][1]:
+					del b['orderID']
+					del b['liquidation price']
+					del b['operation type']
+					del b['sub operation']
+					del b['flags']
+					del b['entry price']
+					del b['entry amount']
+					del b['tp']
+					del b['sl']
+					del b['operation result']
+					del b['P_&_L']
+					b['balance'] = b['balance'][0]
+					b['market side'] = 'out of market'
+				# *** "On a trade", ticker ***
+				elif len(b['operation type'])==0 and b['tp']>1:
+					del b['operation type']
+					del b['sub operation']
+					del b['flags']
+					del b['operation result']
+					del b['P_&_L']
+					b['balance'] = b['balance'][0]
+					b['market side'] = self.marketSide
+				# *** Trade - just Entry, type
+				elif len(b['operation type'])>0 and\
+				len(b['sub operation'])==0 and\
+				b['balance'][0]==b['balance'][1] and b['tp']>1:
+					del b['sub operation']
+					del b['operation result']
+					del b['P_&_L']
+					b['balance'] = b['balance'][0]
+
+					if b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Long':
+						b['market side'] = 'Bull'
+						self.marketSide = b['market side']
+					elif b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Short':
+						b['market side'] = 'Bear'
+						self.marketSide = b['market side']
+				# *** Print, unique ***
+				for k,v in b.items():
+					print(f'{k}\t\t:\t\t{v}')
 
 
 	def reset_results(self):
@@ -110,42 +147,41 @@ class Backtester():
 
 	def open_position(self, price, side, from_opened = 0):
 		self.num_operations += 1 #será necesario contar los cierres de esta forma ?
-		self.isEntry = True
-		self.binnacle['operation type'].append('from open_position( is entry )')
+		self.binnacle['operation type'].append('Entry')
 		self.binnacle['orderID'] += 1
 		if side == 'long':
 			self.num_longs += 1
-			self.binnacle['operation type'].append('from open_position( is Long )')
+			self.binnacle['operation type'].append('Long')
 			# comment
 			if self.is_short_open:
 				self.close_position(price)
-				self.binnacle['flag'].append('from open_position( close previous short )')
+				self.binnacle['sub operation'].append('Close previous, short')
 			if self.is_long_open:
 				self.long_open_price = (self.long_open_price + price)/2
 				self.amount += self.entry_amount/price
-				self.binnacle['flag'].append('from open_position( pyramid )')
+				self.binnacle['flags'].append('pyramid, long')
 			else:
 				self.is_long_open = True
 				self.long_open_price = price
 				self.amount = self.entry_amount/price
-				self.binnacle['flag'].append('from open_position( first on chain? )')
+				self.binnacle['flags'].append('first on chain')
 
 		elif side == 'short':
 			self.num_shorts += 1
-			self.binnacle['operation type'].append('from open_position( is Short )')
+			self.binnacle['operation type'].append('Short')
 			# comment
 			if self.is_long_open:
 				self.close_position(price)
-				self.binnacle['flag'].append('from open_position( close previous long )')
+				self.binnacle['sub operation'].append('Close previous, long')
 			if self.is_short_open:
 				self.short_open_price = (self.short_open_price + price)/2
 				self.amount += self.entry_amount/price
-				self.binnacle['flag'].append('from open_position( pyramid )')
+				self.binnacle['flags'].append('pyramid, short')
 			else:
 				self.is_short_open = True
 				self.short_open_price = price
 				self.amount = self.entry_amount/price
-				self.binnacle['flag'].append('from open_position( first on chain? )')
+				self.binnacle['flags'].append('first on chain')
 		# self.amount = self.entry_amount/price
 
 		if self.trailing_stop_loss:
@@ -154,18 +190,18 @@ class Backtester():
 
 	def close_position(self, price):
 		self.num_operations += 1
-		self.isExit = True
-		self.binnacle['operation type'].append('from close_position( is exit )')
+		self.binnacle['operation type'].append('Exit')
+		self.binnacle['entry amount'] = []
 
 		if self.is_long_open:
 			result = self.amount * (price - self.long_open_price)
-			self.binnacle['flag'].append('from close_position( close previous long )')
+			self.binnacle['operation type'].append('Close, Long')
 			self.is_long_open = False
 			self.long_open_price = 0
 
 		elif self.is_short_open:
 			result = self.amount * (self.short_open_price - price)
-			self.binnacle['flag'].append('from close_position( close previous short )')
+			self.binnacle['operation type'].append('Close, Short')
 			self.is_short_open = False
 			self.short_open_price = 0
 
@@ -175,14 +211,16 @@ class Backtester():
 		if result > 0:
 			self.winned += 1
 			self.drawdown.append(0)
-			self.binnacle['operation result'].append(' *** *** winned *** *** ')
+			self.binnacle['operation result'] = '*** winned ***'
 		else:
 			self.lossed += 1
 			self.drawdown.append(result)
-			self.binnacle['operation result'].append(' *** *** lossed *** *** ')
+			self.binnacle['operation result'] = '*** lossed ***'
 
 		self.take_profit_price = 0
 		self.stop_loss_price = 0
+		self.binnacle['tp'] = self.take_profit_price
+		self.binnacle['sl'] = self.stop_loss_price
 
 
 
@@ -190,37 +228,38 @@ class Backtester():
 		# self.tp_long = tp_long
 		if self.is_long_open:
 			self.take_profit_price = price * tp_long
-			self.binnacle['tp'].append( f' tp_long {self.take_profit_price}' )
+			self.binnacle['tp'] = self.take_profit_price
 		elif self.is_short_open:
 			self.take_profit_price = price * tp_short
-			self.binnacle['tp'].append( f' tp_short {self.take_profit_price}' )
+			self.binnacle['tp'] = self.take_profit_price
 
 
 	def set_stop_loss(self, price, sl_long, sl_short):
 		if self.is_long_open:
 			self.stop_loss_price = price * sl_long
-			self.binnacle['sl'].append( f' sl_long {self.stop_loss_price}' )
+			self.binnacle['sl'] = self.stop_loss_price
 		if self.is_short_open:
 			self.stop_loss_price = price * sl_short
-			self.binnacle['sl'].append( f' sl_short {self.stop_loss_price}' )
+			self.binnacle['sl'] = self.stop_loss_price
+
 
 	def return_results(self, symbol, start_date, end_date):
 		profit = sum(self.profit)
 		drawdown = sum(self.drawdown)
 		fees = (abs(profit) * self.fee_cost * self.num_operations)
 		results = {
-			'symbol' : symbol,
-			'start_date': start_date,
-			'end_date': end_date,
-			'balance' : self.balance,
-			'profit' :	profit,
-			'drawdown': drawdown,
-			'profit_after_fees': profit - fees,
-			'num_operations' : self.num_operations,
-			'num_long' : self.num_longs,
-			'num_shorts': self.num_shorts,
-			'winned' : self.winned,
-			'lossed' : self.lossed
+			'symbol'			: symbol,
+			'start_date'		: start_date,
+			'end_date'			: end_date,
+			'balance'			: self.balance,
+			'profit'			: profit,
+			'drawdown'			: drawdown,
+			'profit_after_fees'	: profit - fees,
+			'num_operations'	: self.num_operations,
+			'num_long'			: self.num_longs,
+			'num_shorts'		: self.num_shorts,
+			'winned'			: self.winned,
+			'lossed'			: self.lossed
 		}
 		if self.num_operations > 0 and (self.winned + self.lossed) > 0:
 			winrate = self.winned / (self.winned + self.lossed)
@@ -254,7 +293,7 @@ class Backtester():
 				if strategy.checkLongSignal(i):
 					self.open_position(price = close[i], side = 'long', from_opened = i)
 
-					self.binnacle['entry price'] = close[i] # *** buy long price / enter long price
+					self.binnacle['entry price'] = close[i]
 					self.margin_call = self.margin_rate * self.binnacle['entry price']
 					self.binnacle['liquidation price'] = self.margin_call
 					self.binnacle['entry amount'].append(self.amount)
@@ -266,7 +305,7 @@ class Backtester():
 				elif strategy.checkShortSignal(i):
 					self.open_position(price = close[i], side = 'short', from_opened = i)
 
-					self.binnacle['entry price'] = close[i] # *** buy short price / enter short price
+					self.binnacle['entry price'] = close[i]
 					self.margin_call = (self.margin_rate+1) * self.binnacle['entry price']
 					self.binnacle['liquidation price'] = self.margin_call
 					self.binnacle['entry amount'].append(self.amount)
@@ -301,7 +340,9 @@ class Backtester():
 							self.close_position(price = self.take_profit_price)
 
 			else:
-				print('*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***')
+				print('\n*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***\n')
+				import sys
+				sys.exit()
 
 			# *** *** BINNACLE REGISTER start	***
 			self.binnacle['indexID']= i
@@ -311,59 +352,35 @@ class Backtester():
 			# *** Profit and loss when exit operations
 			if len(self.binnacle['balance'])>1:
 				if self.binnacle['balance'][0] < self.binnacle['balance'][1]:
-					self.binnacle['P_&_L'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
+					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
 				elif self.binnacle['balance'][0] > self.binnacle['balance'][1]:
-					self.binnacle['P_&_L'].append( self.binnacle['balance'][1] - self.binnacle['balance'][0] )
-			self.binnacle['balance'].remove( self.binnacle['balance'][0] )
+					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
+			# self.binnacle['balance'].remove( self.binnacle['balance'][0] )
 
 			# *** Show exit price , orderID
-			if len(self.binnacle['operation type']) > 0:
-				if self.binnacle['operation type'][0] == 'from close_position( is exit )':
-					self.binnacle['exit price'].append( close[i] )
 
-			if self.is_long_open:
-				if close[i] <= self.binnacle['liquidation price']:
-					print('marginCALL',' index: ', i)
-			elif self.is_short_open:
-				if close[i] >= self.binnacle['liquidation price']:
-					print('marginCALL',' index: ', i)
+			self.binnacle['close price'] = close[i]
 
 			# *** ***	BINNACLE REGISTER END *** *** *** ***
-			self.saveAndClearBinn()
+			self.saveAndClearBinnacle()
 			# *** RESET VALUES ***
-
 
 		# *** *** *** *** *** SHOW BINNACLE start *** *** *** *** ***
 		if self.showBinnacle:
-			# print(len(self.archive))
-			# print('show Binnacle function')
-			for b in self.archive:
-				if b['indexID'] > 0: # filtro
-					b['orderID'] = str(b['orderID'])+' -(mkt.entry)'
-					if len(self.binnacle['operation type']) > 0:
-						if b['operation type'][0] != 'from open_position( is entry )':
-							b['orderID'] = '_'
-					for k,v in b.items():
-						print(k,'\t',v)
-
+			self.parseArchive()
 
 		# *** agregar columnas al dataframe
-		balances = []
+		""" balances = []
 		for b in self.archive:
 			try:
 				balances.append( b['balance'][0] )
 				df['c_balances'] = balances
 			except:
 				IndexError()
-				continue
+				continue """
 		# *** agregar columnas al dataframe
 
 		# *** *** *** *** *** SHOW BINNACLE end *** *** *** *** ***
-
-		"""la funcion parsea
-			resetea
-			imprime/no imprime
-		"""
 
 		#	***	***	*** PLOT start *** ***	#
 		if self.plotOnNewWindow:
