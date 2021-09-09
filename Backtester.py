@@ -9,28 +9,34 @@ class Backtester():
 				trailing_stop_loss,
 				entry_amount_p,
 				showBinnacle,
-				plotOnNewWindow
+				plotOnNewWindow,
+				bullMarket,
+				bearMarket
 	):
-		self.initial_balance = initial_balance
-		self.balance = initial_balance
-		self.amount = 0
-		self.leverage = leverage
-		self.fee_cost = 0.02 / 100	#Binance
+
+		self.initial_balance 	= initial_balance
+		self.balance 			= initial_balance
+		self.amount 			= 0
+		self.leverage 			= leverage
+		self.fee_cost 			= 0.02 / 100	#Binance
 
 		self.entry_amount_p = entry_amount_p	#Entry amount percentage constant
-		self.entry_amount = self.balance * self.entry_amount_p * self.leverage
+		self.entry_amount 	= self.balance * self.entry_amount_p * self.leverage
 
-		self.profit = []
-		self.drawdown = []
-		self.winned = 0
-		self.lossed = 0
+		self.profit 	= []
+		self.drawdown 	= []
+		self.winned 	= 0
+		self.lossed 	= 0
 
-		self.num_operations = 0
-		self.num_longs = 0
-		self.num_shorts = 0
+		self.bullMarket = bullMarket
+		self.bearMarket = bearMarket
 
-		self.is_long_open = False
-		self.is_short_open = False
+		self.num_operations = 	0
+		self.num_longs 		= 	0
+		self.num_shorts 	= 	0
+
+		self.is_long_open 	= False
+		self.is_short_open 	= False
 
 		self.trailing_stop_loss = trailing_stop_loss #Boolean
 		self.from_opened = 0
@@ -38,34 +44,33 @@ class Backtester():
 		self.margin_edge = 100
 		self.margin_rate = 1-((self.margin_edge - self.leverage) / self.leverage)/100
 
-		self.showBinnacle = showBinnacle #Boolean
-		self.plotOnNewWindow = plotOnNewWindow #Boolean
-		self.archive = [] #Store dict(binnacles)
-		self.marketSide = 'out of market'
-		self.binnacle ={
-				'timestamp' : str(),
-				'indexID' : int(),
-				'orderID'	:	0, # formato: n(1:inf) -> n-enOrd | 1,2,3,...,
-				'operation type' : [],
-				'flags' : [], #se irá
-				'entry price' : 1,
-				'entry amount' : [], #[usd, btc]
-				'tp' : 1,
-				'sl' : 1,
-				'liquidation price' : 1,
-				'sub operation' : [],
-				# 'close price' : 1, #float
-				'operation result' : 0, #' *** *** winned/lossed *** *** ',
-				'P_&_L' : 1,
-				'balance' : [], #1 or 2 values
-				'leverage' : self.leverage,
-				'hlc' : [],
-				'market side' : self.marketSide
-				,' *** end of line *** ' : ' *** end of line *** '
+		self.showBinnacle 		= showBinnacle #Boolean
+		self.plotOnNewWindow 	= plotOnNewWindow #Boolean
+		self.archive 			= [] #Store dict(binnacles)
+		self.marketSide 		= 'out of market'
+		self.binnacle 			= {
+			'timestamp' 		: str(),
+			'indexID' 			: int(),
+			'orderID'			:	0, # formato: n(1:inf) -> n-enOrd | 1,2,3,...,
+			'operation type'	: [],
+			'flags' 			: [],
+			'entry price' 		: 1,
+			'entry amount' 		: [], #[usd, btc]
+			'tp' 				: 1,
+			'sl' 				: 1,
+			'liquidation price' : 1,
+			'sub operation' 	: [],
+			'operation result' 	: 0, #' *** *** winned/lossed *** *** ',
+			'P_&_L' 			: 1,
+			'balance' 			: [], #1 or 2 values
+			'leverage' 			: self.leverage,
+			'hlc' 				: [],
+			'market side' 		: self.marketSide,
+			'***end of line***' : '***end of line***'
 		}
 
 
-	def saveAndClearBinnacle(self):
+	def storageAndClearBinnacle(self):
 		# *** Storage dictionary on a list
 		self.archive.append( self.binnacle.copy() )
 		# *** Reset values
@@ -157,40 +162,42 @@ class Backtester():
 		self.num_operations += 1 #será necesario contar los cierres de esta forma ?
 		self.binnacle['operation type'].append('Entry')
 		self.binnacle['orderID'] += 1
-		if side == 'long':
-			self.num_longs += 1
-			self.binnacle['operation type'].append('Long')
-			# comment
-			if self.is_short_open:
-				self.close_position(price)
-				self.binnacle['sub operation'].append('Close previous, short')
-			if self.is_long_open:
-				self.long_open_price = (self.long_open_price + price)/2
-				self.amount += self.entry_amount/price
-				self.binnacle['flags'].append('pyramid, long')
-			else:
-				self.is_long_open = True
-				self.long_open_price = price
-				self.amount = self.entry_amount/price
-				self.binnacle['flags'].append('first on chain')
+		if self.bullMarket:
+			if side == 'long':
+				self.num_longs += 1
+				self.binnacle['operation type'].append('Long')
+				# comment
+				if self.is_short_open:
+					self.close_position(price)
+					self.binnacle['sub operation'].append('Close previous, short')
+				if self.is_long_open:
+					self.long_open_price = (self.long_open_price + price)/2
+					self.amount += self.entry_amount/price
+					self.binnacle['flags'].append('pyramid, long')
+				else:
+					self.is_long_open = True
+					self.long_open_price = price
+					self.amount = self.entry_amount/price
+					self.binnacle['flags'].append('first on chain')
 
-		elif side == 'short':
-			self.num_shorts += 1
-			self.binnacle['operation type'].append('Short')
-			# comment
-			if self.is_long_open:
-				self.close_position(price)
-				self.binnacle['sub operation'].append('Close previous, long')
-			if self.is_short_open:
-				self.short_open_price = (self.short_open_price + price)/2
-				self.amount += self.entry_amount/price
-				self.binnacle['flags'].append('pyramid, short')
-			else:
-				self.is_short_open = True
-				self.short_open_price = price
-				self.amount = self.entry_amount/price
-				self.binnacle['flags'].append('first on chain')
-		# self.amount = self.entry_amount/price
+		if self.bearMarket:
+			if side == 'short':
+				self.num_shorts += 1
+				self.binnacle['operation type'].append('Short')
+				# comment
+				if self.is_long_open:
+					self.close_position(price)
+					self.binnacle['sub operation'].append('Close previous, long')
+				if self.is_short_open:
+					self.short_open_price = (self.short_open_price + price)/2
+					self.amount += self.entry_amount/price
+					self.binnacle['flags'].append('pyramid, short')
+				else:
+					self.is_short_open = True
+					self.short_open_price = price
+					self.amount = self.entry_amount/price
+					self.binnacle['flags'].append('first on chain')
+			# self.amount = self.entry_amount/price
 
 		if self.trailing_stop_loss:
 			self.from_opened = from_opened
@@ -201,17 +208,19 @@ class Backtester():
 		self.binnacle['operation type'].append('Exit')
 		self.binnacle['entry amount'] = []
 
-		if self.is_long_open:
-			result = self.amount * (price - self.long_open_price)
-			self.binnacle['operation type'].append('Close, Long')
-			self.is_long_open = False
-			self.long_open_price = 0
+		if self.bullMarket:
+			if self.is_long_open:
+				result = self.amount * (price - self.long_open_price)
+				self.binnacle['operation type'].append('Close, Long')
+				self.is_long_open = False
+				self.long_open_price = 0
 
-		elif self.is_short_open:
-			result = self.amount * (self.short_open_price - price)
-			self.binnacle['operation type'].append('Close, Short')
-			self.is_short_open = False
-			self.short_open_price = 0
+		if self.bearMarket:
+			if self.is_short_open:
+				result = self.amount * (self.short_open_price - price)
+				self.binnacle['operation type'].append('Close, Short')
+				self.is_short_open = False
+				self.short_open_price = 0
 
 		self.profit.append(result)
 		self.balance += result
@@ -233,21 +242,25 @@ class Backtester():
 
 	def set_take_profit(self, price, tp_long, tp_short):
 		# self.tp_long = tp_long
-		if self.is_long_open:
-			self.take_profit_price = price * tp_long
-			self.binnacle['tp'] = self.take_profit_price
-		elif self.is_short_open:
-			self.take_profit_price = price * tp_short
-			self.binnacle['tp'] = self.take_profit_price
+		if self.bullMarket:
+			if self.is_long_open:
+				self.take_profit_price = price * tp_long
+				self.binnacle['tp'] = self.take_profit_price
+		if self.bearMarket:
+			if self.is_short_open:
+				self.take_profit_price = price * tp_short
+				self.binnacle['tp'] = self.take_profit_price
 
 
 	def set_stop_loss(self, price, sl_long, sl_short):
-		if self.is_long_open:
-			self.stop_loss_price = price * sl_long
-			self.binnacle['sl'] = self.stop_loss_price
-		if self.is_short_open:
-			self.stop_loss_price = price * sl_short
-			self.binnacle['sl'] = self.stop_loss_price
+		if self.bullMarket:
+			if self.is_long_open:
+				self.stop_loss_price = price * sl_long
+				self.binnacle['sl'] = self.stop_loss_price
+		if self.bearMarket:
+			if self.is_short_open:
+				self.stop_loss_price = price * sl_short
+				self.binnacle['sl'] = self.stop_loss_price
 
 
 	def return_results(self, symbol, start_date, end_date):
@@ -300,58 +313,59 @@ class Backtester():
 				self.binnacle['hlc'].append([high[i], low[i], close[i]])
 				self.binnacle['balance'].append(self.balance)
 
-				if strategy.checkLongSignal(i):
-					self.open_position(price = close[i], side = 'long', from_opened = i)
+				if self.bullMarket:
+					if strategy.checkLongSignal(i):
+						self.open_position(price = close[i], side = 'long', from_opened = i)
 
-					self.binnacle['entry price'] = close[i]
-					self.margin_call = self.margin_rate * self.binnacle['entry price']
-					self.binnacle['liquidation price'] = self.margin_call
-					self.binnacle['entry amount'].append(self.amount)
-					self.binnacle['entry amount'].append(self.amount * close[i])
+						self.binnacle['entry price'] = close[i]
+						self.margin_call = self.margin_rate * self.binnacle['entry price']
+						self.binnacle['liquidation price'] = self.margin_call
+						self.binnacle['entry amount'].append(self.amount)
+						self.binnacle['entry amount'].append(self.amount * close[i])
 
-					self.set_take_profit(price = close[i], tp_long=tp_long, tp_short=tp_short)
-					self.set_stop_loss(price = close[i], sl_long=sl_long, sl_short=sl_short)
+						self.set_take_profit(price = close[i], tp_long=tp_long, tp_short=tp_short)
+						self.set_stop_loss(price = close[i], sl_long=sl_long, sl_short=sl_short)
 
-				elif strategy.checkShortSignal(i):
-					self.open_position(price = close[i], side = 'short', from_opened = i)
+				if self.bearMarket:
+					if strategy.checkShortSignal(i):
+						self.open_position(price = close[i], side = 'short', from_opened = i)
 
-					self.binnacle['entry price'] = close[i]
-					self.margin_call = (self.margin_rate+1) * self.binnacle['entry price']
-					self.binnacle['liquidation price'] = self.margin_call
-					self.binnacle['entry amount'].append(self.amount)
-					self.binnacle['entry amount'].append(self.amount * close[i])
+						self.binnacle['entry price'] = close[i]
+						self.margin_call = (self.margin_rate+1) * self.binnacle['entry price']
+						self.binnacle['liquidation price'] = self.margin_call
+						self.binnacle['entry amount'].append(self.amount)
+						self.binnacle['entry amount'].append(self.amount * close[i])
 
-					self.set_take_profit(price = close[i], tp_long=tp_long, tp_short=tp_short)
-					self.set_stop_loss(price = close[i], sl_long=sl_long, sl_short=sl_short)
+						self.set_take_profit(price = close[i], tp_long=tp_long, tp_short=tp_short)
+						self.set_stop_loss(price = close[i], sl_long=sl_long, sl_short=sl_short)
 
-				else:
-					if self.trailing_stop_loss  and (self.is_long_open or self.is_short_open):
-						new_max = high[self.from_opened:i].max()
-						previous_stop_loss = self.stop_loss_price
-						self.set_stop_loss(price = new_max, sl_long=sl_long, sl_short=sl_short)
-						if previous_stop_loss > self.stop_loss_price:
-							self.stop_loss_price = previous_stop_loss
+				if self.trailing_stop_loss  and (self.is_long_open or self.is_short_open):
+					new_max = high[self.from_opened:i].max()
+					previous_stop_loss = self.stop_loss_price
+					self.set_stop_loss(price = new_max, sl_long=sl_long, sl_short=sl_short)
+					if previous_stop_loss > self.stop_loss_price:
+						self.stop_loss_price = previous_stop_loss
 
-					if self.is_long_open:
-						if high[i] >= self.take_profit_price:
-							self.close_position(price = self.take_profit_price)
+				if self.is_long_open:
+					if high[i] >= self.take_profit_price:
+						self.close_position(price = self.take_profit_price)
 
-						elif low[i] <= self.stop_loss_price:
-							self.close_position(price = self.stop_loss_price)
+					elif low[i] <= self.stop_loss_price:
+						self.close_position(price = self.stop_loss_price)
 
-					elif self.is_short_open:
-						if high[i] >= self.stop_loss_price:
-							self.close_position(price = self.stop_loss_price)
+				elif self.is_short_open:
+					if high[i] >= self.stop_loss_price:
+						self.close_position(price = self.stop_loss_price)
 
-						elif low[i] <= self.take_profit_price:
-							self.close_position(price = self.take_profit_price)
+					elif low[i] <= self.take_profit_price:
+						self.close_position(price = self.take_profit_price)
 			else:
 				print('\n*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***\n')
 				import sys
 				sys.exit()
 
 			# *** *** BINNACLE REGISTER start	***
-			
+
 			self.binnacle['balance'].append(self.balance) #balance after operations
 
 			# *** Calculate "profit and loss" when close position
@@ -361,71 +375,71 @@ class Backtester():
 				elif self.binnacle['balance'][0] > self.binnacle['balance'][1]:
 					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
 
-			self.saveAndClearBinnacle()
-			# *** ***	BINNACLE REGISTER END *** *** *** ***
-			# *** RESET VALUES ***
-
-
-
-		# *** *** *** *** *** SHOW BINNACLE start *** *** *** *** ***
+			self.storageAndClearBinnacle()
+			# *** ***	BINNACLE REGISTER END 	*** ***
+			# *** ***	RESETED VALUES 			*** ***
+		# *** *** *** *** *** OUT OF FOR CICLE, in range(df) *** *** *** *** ***
 		if self.showBinnacle:
 			self.parseArchive()
 
-		# *** agregar columnas al dataframe
-		""" balances = []
+		if self.plotOnNewWindow:
+			self.__plot__(df)
+
+
+	def __plot__(self, df):
+		self.datafr = df
+		# *** Esto hay que hacerlo bien hecho ***
+		balances = []
 		for b in self.archive:
 			try:
 				balances.append( b['balance'][0] )
-				df['c_balances'] = balances
+				self.datafr['c_balances'] = balances
 			except:
 				IndexError()
-				continue """
-		# *** agregar columnas al dataframe
+				continue
+		#----------------------------------------
+		import tkinter
+		from matplotlib.backends.backend_tkagg import (
+			FigureCanvasTkAgg, NavigationToolbar2Tk)
+		# Implement the default Matplotlib key bindings.
+		from matplotlib.backend_bases import key_press_handler
+		from matplotlib.figure import Figure
 
-		# *** *** *** *** *** SHOW BINNACLE end *** *** *** *** ***
+		# esto puede ser una lambda
+		def on_key_press(event):
+			print("you pressed {}".format(event.key))
+			key_press_handler(event, canvas, toolbar)
 
-		#	***	***	*** PLOT start *** ***	#
-		if self.plotOnNewWindow:
-			import tkinter
-			from matplotlib.backends.backend_tkagg import (
-				FigureCanvasTkAgg, NavigationToolbar2Tk)
-			# Implement the default Matplotlib key bindings.
-			from matplotlib.backend_bases import key_press_handler
-			from matplotlib.figure import Figure
+		# esto puede ser una lambda
+		def _quit():
+			root.quit()     # stops mainloop
+			#root.destroy()  # this is necessary on Windows to prevent
+							# Fatal Python Error: PyEval_RestoreThread: NULL tstate
 
-			def on_key_press(event):
-				print("you pressed {}".format(event.key))
-				key_press_handler(event, canvas, toolbar)
+		root = tkinter.Tk()
+		root.wm_title("Embedding in Tk")
 
-			def _quit():
-				root.quit()     # stops mainloop
-				#root.destroy()  # this is necessary on Windows to prevent
-								# Fatal Python Error: PyEval_RestoreThread: NULL tstate
+			# *** *** *** desde aqui va el código *** *** ***
 
-			root = tkinter.Tk()
-			root.wm_title("Embedding in Tk")
+		fig = Figure(figsize=(5, 4), dpi=100)
+		fig.add_subplot(111).plot( self.datafr['c_balances'] )
 
-				# *** *** *** desde aqui va el código *** *** ***
+			# *** *** *** HASTA quí *** *** ***
 
-			fig = Figure(figsize=(5, 4), dpi=100)
-			fig.add_subplot(111).plot( df['c_balances'] )
+		canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
+		canvas.draw()
+		canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-				# *** *** *** HASTA quí *** *** ***
+		toolbar = NavigationToolbar2Tk(canvas, root)
+		toolbar.update()
+		canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
 
-			canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
-			canvas.draw()
-			canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+		canvas.mpl_connect("key_press_event", on_key_press)
 
-			toolbar = NavigationToolbar2Tk(canvas, root)
-			toolbar.update()
-			canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
+		button = tkinter.Button(master=root, text="Quit", command=_quit)
+		button.pack(side=tkinter.BOTTOM)
 
-			canvas.mpl_connect("key_press_event", on_key_press)
-
-			button = tkinter.Button(master=root, text="Quit", command=_quit)
-			button.pack(side=tkinter.BOTTOM)
-
-			tkinter.mainloop()
-			# If you put root.destroy() here, it will cause an error if the window is
-			# closed with the window manager.
-			#	***	***	*** PLOT end *** ***	#
+		tkinter.mainloop()
+		# If you put root.destroy() here, it will cause an error if the window is
+		# closed with the window manager.
+		#	***	***	*** PLOT end *** ***	#

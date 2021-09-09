@@ -3,7 +3,9 @@ from Backtester import Backtester
 
 
 class Individual:
-	def __init__(self, n_genes, gene_ranges,
+	def __init__(self,
+				n_genes,
+				gene_ranges,
 				initial_balance,
 				leverage,
 				trailing_stop_loss,

@@ -44,6 +44,7 @@ strategy = BBStrategy(
 )
 strategy.setUp(df)
 
+# *** ---------------------------------------------------------------
 # BACKTEST ATRIBUTES
 initial_balance     = 1000
 leverage            = 10
@@ -51,15 +52,20 @@ trailing_stop_loss  = True
 entry_amount_p      = 0.05
 
 showBinnacle        = False
-plotOnNewWindow     = False
+plotOnNewWindow     = True
 
+bullMarket          = False
+bearMarket          = True
+# *** ---------------------------------------------------------------
 tryback = Backtester(
     initial_balance,
     leverage,
     trailing_stop_loss,
     entry_amount_p,
     showBinnacle,
-    plotOnNewWindow
+    plotOnNewWindow,
+    bullMarket,
+    bearMarket
 )
 
 # BACKTEST PARAMETERS
@@ -72,17 +78,26 @@ tryback.__backtesting__(
     sl_short,
 )
 # *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-genes = [
-    bb_len,
-    n_std,
-    rsi_len,
-    rsi_overbought,
-    rsi_oversold,
-    tp_long,
-    tp_short,
-    sl_long,
-    sl_short
-]
+genes = {
+    'bb_len'          : bb_len,
+    'n_std'           : n_std,
+    'rsi_len'         : rsi_len,
+    'rsi_overbought'  : rsi_overbought,
+    'rsi_oversold'    : rsi_oversold,
+    'tp_long'         : tp_long,
+    'tp_short'        : tp_short,
+    'sl_long'         : sl_long,
+    'sl_short'        : sl_short
+}
+parameters = {
+    'initial_balance'     : initial_balance,
+    'leverage'            : leverage,
+    'trailing_stop_loss'  : trailing_stop_loss,
+    'entry_amount_p'      : entry_amount_p,
+    'bullMarket'          : bullMarket,
+    'bearMarket'          : bearMarket
+}
+
 output      = tryback.return_results(symbol, start_date, end_date)
 results     = pd.DataFrame.from_dict(output, orient='index')
 gross_profit= output['balance']
@@ -90,6 +105,7 @@ net_profit  = output['profit_after_fees']
 strategy_roi= ( ((net_profit+initial_balance) / initial_balance)-1 ) *100
 print(results)
 print(genes)
+print(parameters)
 print(f"""
 Strategy, roi       : %{strategy_roi :.2f}
 Buy and Hold, roi   : %{bh_roi:.2f}
