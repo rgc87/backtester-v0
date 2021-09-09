@@ -50,7 +50,7 @@ leverage            = 10
 trailing_stop_loss  = True
 entry_amount_p      = 0.05
 
-showBinnacle        = True
+showBinnacle        = False
 plotOnNewWindow     = False
 
 tryback = Backtester(

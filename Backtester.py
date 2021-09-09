@@ -54,7 +54,7 @@ class Backtester():
 				'sl' : 1,
 				'liquidation price' : 1,
 				'sub operation' : [],
-				'close price' : 1, #float
+				# 'close price' : 1, #float
 				'operation result' : 0, #' *** *** winned/lossed *** *** ',
 				'P_&_L' : 1,
 				'balance' : [], #1 or 2 values
@@ -77,7 +77,7 @@ class Backtester():
 		self.binnacle['balance'] = []
 		self.binnacle['P_&_L'] = 1
 		# self.binnacle['entry price'] = 1
-		self.binnacle['close price'] = 1
+		# self.binnacle['close price'] = 1
 		# self.binnacle['entry amount'] = [] # base , quoted
 		# self.binnacle['liquidation price'] = 1
 		self.binnacle['hlc'] = []
@@ -85,7 +85,7 @@ class Backtester():
 
 	def parseArchive(self):
 		for b in self.archive:
-			if b['indexID'] > 4500: #filtro temporal, para agilizar depuración
+			if b['indexID'] > 5000: #filtro temporal, para agilizar depuración
 				# *** "Out of Market", ticker ***
 				if b['tp']==0 and b['balance'][0]==b['balance'][1]:
 					del b['orderID']
@@ -118,7 +118,15 @@ class Backtester():
 					del b['operation result']
 					del b['P_&_L']
 					b['balance'] = b['balance'][0]
-
+					# *** Set Market Side ***
+					if b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Long':
+						b['market side'] = 'Bull'
+						self.marketSide = b['market side']
+					elif b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Short':
+						b['market side'] = 'Bear'
+						self.marketSide = b['market side']
+				# *** Any other operation
+				elif len(b['operation type'])>0 and len(b['sub operation'])>0:
 					if b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Long':
 						b['market side'] = 'Bull'
 						self.marketSide = b['market side']
@@ -223,7 +231,6 @@ class Backtester():
 		self.binnacle['sl'] = self.stop_loss_price
 
 
-
 	def set_take_profit(self, price, tp_long, tp_short):
 		# self.tp_long = tp_long
 		if self.is_long_open:
@@ -287,8 +294,11 @@ class Backtester():
 		for i in range(len(df)): #probar con itertuples()
 
 			if self.balance > 0:
-				self.binnacle['balance'].append(self.balance)
+				self.binnacle['indexID']	= i
+				self.binnacle['timestamp'] 	= df.index[i]
+				# self.binnacle['close price'] = close[i]
 				self.binnacle['hlc'].append([high[i], low[i], close[i]])
+				self.binnacle['balance'].append(self.balance)
 
 				if strategy.checkLongSignal(i):
 					self.open_position(price = close[i], side = 'long', from_opened = i)
@@ -326,44 +336,36 @@ class Backtester():
 						if high[i] >= self.take_profit_price:
 							self.close_position(price = self.take_profit_price)
 
-
 						elif low[i] <= self.stop_loss_price:
 							self.close_position(price = self.stop_loss_price)
-
 
 					elif self.is_short_open:
 						if high[i] >= self.stop_loss_price:
 							self.close_position(price = self.stop_loss_price)
 
-
 						elif low[i] <= self.take_profit_price:
 							self.close_position(price = self.take_profit_price)
-
 			else:
 				print('\n*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***\n')
 				import sys
 				sys.exit()
 
 			# *** *** BINNACLE REGISTER start	***
-			self.binnacle['indexID']= i
-			self.binnacle['timestamp'] = df.index[i]
+			
 			self.binnacle['balance'].append(self.balance) #balance after operations
 
-			# *** Profit and loss when exit operations
+			# *** Calculate "profit and loss" when close position
 			if len(self.binnacle['balance'])>1:
 				if self.binnacle['balance'][0] < self.binnacle['balance'][1]:
 					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
 				elif self.binnacle['balance'][0] > self.binnacle['balance'][1]:
 					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
-			# self.binnacle['balance'].remove( self.binnacle['balance'][0] )
 
-			# *** Show exit price , orderID
-
-			self.binnacle['close price'] = close[i]
-
-			# *** ***	BINNACLE REGISTER END *** *** *** ***
 			self.saveAndClearBinnacle()
+			# *** ***	BINNACLE REGISTER END *** *** *** ***
 			# *** RESET VALUES ***
+
+
 
 		# *** *** *** *** *** SHOW BINNACLE start *** *** *** *** ***
 		if self.showBinnacle:
