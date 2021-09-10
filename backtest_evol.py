@@ -49,6 +49,9 @@ Digamos que son parámetros de 2da (experimentales)
 population = P.population
 number_of_generations = 25
 
+# *** ---------------------------------------------------------------
+# *** ---------------------------------------------------------------
+
 print(f'''GENETIC ALGORITHM TO OPTIMIZE QUANT STRATEGY
 BOLLINGER BANDS - RSI
 SYMBOL: {symbol} ~ TIMEFRAME: {timeframe}''')
@@ -102,8 +105,9 @@ for x in range(number_of_generations):
 	output_best = pd.DataFrame.from_dict(best, orient='index')
 	output_worst = pd.DataFrame.from_dict(worst, orient='index')
 
-	# *** *** PERSISTENCIA *** ***
+	# *** -------------------- PERSISTENCIA ----------------------***
 	persistOnMongo = False
+	# *** -------------------- PERSISTENCIA ----------------------***
 
 	print(f'''
 	GENERATION: {x}
@@ -121,6 +125,16 @@ for x in range(number_of_generations):
 
 	the_bests.append( best )
 
+# BEST RESULT FROM EVOLUTION
+print(
+	'*** *** *** *** *** BETTER RESULT OVERALL *** *** *** *** *** ',
+	pd.DataFrame.from_dict(
+		max( the_bests, key= lambda x: x['profit_after_fees'] ),
+		orient='index'),
+	'\n\n',
+	'*** END ***'
+	'\n\n')
+
 if persistOnMongo:
 	import pymongo
 	from pymongo import MongoClient
@@ -137,12 +151,3 @@ if persistOnMongo:
 	result = collection.insert_many( documents )
 	result.inserted_ids
 
-# BEST RESULT FROM EVOLUTION
-print(
-	'*** *** *** *** *** BETTER RESULT OVERALL *** *** *** *** *** ',
-	pd.DataFrame.from_dict(
-		max( the_bests, key= lambda x: x['profit_after_fees'] ),
-		orient='index'),
-	'\n\n',
-	'*** END ***'
-	'\n\n')

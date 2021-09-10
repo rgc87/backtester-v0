@@ -66,7 +66,7 @@ class Backtester():
 			'leverage' 			: self.leverage,
 			'hlc' 				: [],
 			'market side' 		: self.marketSide,
-			'***end of line***' : '***end of line***'
+			'***end of line***' : '***end of line***   '
 		}
 
 
@@ -90,7 +90,7 @@ class Backtester():
 
 	def parseArchive(self):
 		for b in self.archive:
-			if b['indexID'] > 5000: #filtro temporal, para agilizar depuración
+			if b['indexID'] > 4000: #filtro temporal, para agilizar depuración
 				# *** "Out of Market", ticker ***
 				if b['tp']==0 and b['balance'][0]==b['balance'][1]:
 					del b['orderID']
@@ -118,27 +118,28 @@ class Backtester():
 				# *** Trade - just Entry, type
 				elif len(b['operation type'])>0 and\
 				len(b['sub operation'])==0 and\
-				b['balance'][0]==b['balance'][1] and b['tp']>1:
+				b['balance'][0]==b['balance'][1]:# and b['tp']>1:
 					del b['sub operation']
 					del b['operation result']
 					del b['P_&_L']
 					b['balance'] = b['balance'][0]
 					# *** Set Market Side ***
-					if b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Long':
+					if b['operation type'][1] == 'Long': #b['operation type'][0] == 'Entry' and
 						b['market side'] = 'Bull'
 						self.marketSide = b['market side']
-					elif b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Short':
+					elif b['operation type'][1] == 'Short': #b['operation type'][0] == 'Entry' and
 						b['market side'] = 'Bear'
 						self.marketSide = b['market side']
-				# *** Any other operation
+				# *** Other operations // close previous orders
 				elif len(b['operation type'])>0 and len(b['sub operation'])>0:
-					if b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Long':
+					if b['operation type'][1] == 'Long': #b['operation type'][0] == 'Entry' and
 						b['market side'] = 'Bull'
 						self.marketSide = b['market side']
-					elif b['operation type'][0] == 'Entry' and b['operation type'][1] == 'Short':
+					elif b['operation type'][1] == 'Short': #b['operation type'][0] == 'Entry' and
 						b['market side'] = 'Bear'
 						self.marketSide = b['market side']
-				# *** Print, unique ***
+
+				# *** -------------------- Print, unique -------------------- ***
 				for k,v in b.items():
 					print(f'{k}\t\t:\t\t{v}')
 
@@ -309,7 +310,6 @@ class Backtester():
 			if self.balance > 0:
 				self.binnacle['indexID']	= i
 				self.binnacle['timestamp'] 	= df.index[i]
-				# self.binnacle['close price'] = close[i]
 				self.binnacle['hlc'].append([high[i], low[i], close[i]])
 				self.binnacle['balance'].append(self.balance)
 
@@ -346,38 +346,32 @@ class Backtester():
 					if previous_stop_loss > self.stop_loss_price:
 						self.stop_loss_price = previous_stop_loss
 
-				if self.is_long_open:
-					if high[i] >= self.take_profit_price:
-						self.close_position(price = self.take_profit_price)
-
-					elif low[i] <= self.stop_loss_price:
-						self.close_position(price = self.stop_loss_price)
-
-				elif self.is_short_open:
-					if high[i] >= self.stop_loss_price:
-						self.close_position(price = self.stop_loss_price)
-
-					elif low[i] <= self.take_profit_price:
-						self.close_position(price = self.take_profit_price)
+				if self.bullMarket:
+					if self.is_long_open:
+						if high[i] >= self.take_profit_price:
+							self.close_position(price = self.take_profit_price)
+						elif low[i] <= self.stop_loss_price:
+							self.close_position(price = self.stop_loss_price)
+				if self.bearMarket:
+					if self.is_short_open:
+						if high[i] >= self.stop_loss_price:
+							self.close_position(price = self.stop_loss_price)
+						elif low[i] <= self.take_profit_price:
+							self.close_position(price = self.take_profit_price)
 			else:
 				print('\n*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***\n')
 				import sys
 				sys.exit()
-
 			# *** *** BINNACLE REGISTER start	***
 
-			self.binnacle['balance'].append(self.balance) #balance after operations
-
 			# *** Calculate "profit and loss" when close position
-			if len(self.binnacle['balance'])>1:
-				if self.binnacle['balance'][0] < self.binnacle['balance'][1]:
-					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
-				elif self.binnacle['balance'][0] > self.binnacle['balance'][1]:
-					self.binnacle['P_&_L'] = self.binnacle['balance'][1] - self.binnacle['balance'][0]
+			self.binnacle['balance'].append(self.balance) #balance after operations
+			if len(self.binnacle['balance'])>0:
+					self.binnacle['P_&_L'] = \
+						self.binnacle['balance'][1] - self.binnacle['balance'][0]
 
 			self.storageAndClearBinnacle()
-			# *** ***	BINNACLE REGISTER END 	*** ***
-			# *** ***	RESETED VALUES 			*** ***
+			# *** ***	BINNACLE REGISTER END - RESET VALUES	*** ***
 		# *** *** *** *** *** OUT OF FOR CICLE, in range(df) *** *** *** *** ***
 		if self.showBinnacle:
 			self.parseArchive()
@@ -386,14 +380,14 @@ class Backtester():
 			self.__plot__(df)
 
 
-	def __plot__(self, df):
-		self.datafr = df
+	def __plot__(self,df):
+		dframe = df
 		# *** Esto hay que hacerlo bien hecho ***
 		balances = []
 		for b in self.archive:
 			try:
 				balances.append( b['balance'][0] )
-				self.datafr['c_balances'] = balances
+				df['c_balances'] = balances
 			except:
 				IndexError()
 				continue
@@ -415,30 +409,23 @@ class Backtester():
 			root.quit()     # stops mainloop
 			#root.destroy()  # this is necessary on Windows to prevent
 							# Fatal Python Error: PyEval_RestoreThread: NULL tstate
-
 		root = tkinter.Tk()
 		root.wm_title("Embedding in Tk")
-
 			# *** *** *** desde aqui va el código *** *** ***
 
 		fig = Figure(figsize=(5, 4), dpi=100)
-		fig.add_subplot(111).plot( self.datafr['c_balances'] )
+		fig.add_subplot(111).plot( dframe['c_balances'] )
 
 			# *** *** *** HASTA quí *** *** ***
-
 		canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
 		canvas.draw()
 		canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
 		toolbar = NavigationToolbar2Tk(canvas, root)
 		toolbar.update()
 		canvas.get_tk_widget().pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1)
-
 		canvas.mpl_connect("key_press_event", on_key_press)
-
 		button = tkinter.Button(master=root, text="Quit", command=_quit)
 		button.pack(side=tkinter.BOTTOM)
-
 		tkinter.mainloop()
 		# If you put root.destroy() here, it will cause an error if the window is
 		# closed with the window manager.

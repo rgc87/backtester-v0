@@ -9,7 +9,7 @@ import re
 pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
 df = pd.read_csv(pathFile)
 df = klinesFilter(df, tf='1h')
-df = df.iloc[30000:-1]
+df = df.iloc[29000:-1]
 
 start_date = df.index[0]
 end_date = df.index[-1]
@@ -17,8 +17,8 @@ elapsed_time = start_date-end_date
 
 # Show ROI
 first_price = df.close.iloc[0]
-bh_roi = (( df.close.iloc[-1] / df.close.iloc[0] )-1)*100
 last_price = df.close.iloc[-1]
+bh_roi = (( last_price / first_price )-1)*100
 
 pairNamePattern = re.compile('[A-Z]{6,}')
 symbol = pairNamePattern.search(pathFile).group()
@@ -51,8 +51,8 @@ leverage            = 10
 trailing_stop_loss  = True
 entry_amount_p      = 0.05
 
-showBinnacle        = False
-plotOnNewWindow     = True
+showBinnacle        = True
+plotOnNewWindow     = False
 
 bullMarket          = False
 bearMarket          = True
@@ -67,7 +67,6 @@ tryback = Backtester(
     bullMarket,
     bearMarket
 )
-
 # BACKTEST PARAMETERS
 tryback.__backtesting__(
     df,
@@ -77,7 +76,7 @@ tryback.__backtesting__(
     sl_long,
     sl_short,
 )
-# *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+# *** ---------------------------------------------------------------
 genes = {
     'bb_len'          : bb_len,
     'n_std'           : n_std,
@@ -97,7 +96,6 @@ parameters = {
     'bullMarket'          : bullMarket,
     'bearMarket'          : bearMarket
 }
-
 output      = tryback.return_results(symbol, start_date, end_date)
 results     = pd.DataFrame.from_dict(output, orient='index')
 gross_profit= output['balance']
