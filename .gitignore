@@ -1,6 +1,6 @@
 # directories
-testOutput/*
-testExec/*
+testOutput/
+testExec/
 
 # python
 __pycache__

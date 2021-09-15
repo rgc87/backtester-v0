@@ -71,48 +71,48 @@ class Backtester():
 				self.market_side = 'Out of market'
 
 		# *** Storage on dictionary
-		binnacle ={
-			'timestamp'			: self.timestamp,
-			'index_id'			: self.index_id,
-			'order_id'			: self.order_id,
-			'operation_type'	: self.operation_type,
-			'pyramid_count'		: self.pyramid_counter,
-			'entry_price'		: f'{self.entry_price:.2f}',
-			'entry_am_base'		: f'{self.entry_amount_base:.8f}',
-			'entry_am_quoted'	: f'{self.entry_amount_quoted:.2f}',
-			'takeprofit'		: f'{self.take_profit_price:.2f}',
-			'stoploss'			: f'{self.stop_loss_price:.2f}',
-			'margin_call'		: f'{self.margin_call:.2f}',
-			'leverage'			: self.LEVERAGE,
-			'sub_operation'		: self.sub_operation,
-			'operation_result'	: self.operation_result,
-			'profit_loss'		: f'{self.pL:.2f}',
-			'wallet'			: f'{self.wallet:.2f}',
-			'balance'			: f'{self.balance:.2f}',
-			'candles_hlc'		: self.candles,
-			'market_side'		: self.market_side
-		}
-		self.archive.append(binnacle)
-		# print(f'''
-		# timestamp		: {self.timestamp}
-		# index_id		: {self.index_id}
-		# order_id		: {self.order_id}
-		# operation_type	: {self.operation_type}
-		# pyramid_count	: {self.pyramid_counter}
-		# entry_price		: {f'{self.entry_price:.2f}'}
-		# entry_am_base	: {f'{self.entry_amount_base:.8f}'}
-		# entry_am_quoted : {f'{self.entry_amount_quoted:.2f}'}
-		# takeprofit		: {f'{self.take_profit_price:.2f}'}
-		# stoploss		: {f'{self.stop_loss_price:.2f}'}
-		# margin_call		: {f'{self.margin_call:.2f}'}
-		# leverage		: {self.LEVERAGE}
-		# sub_operation	: {self.sub_operation}
-		# operation_result: {self.operation_result}
-		# profit_loss		: {f'{self.pL:.2f}'}
-		# wallet			: {f'{self.wallet:.2f}'}
-		# balance			: {f'{self.balance:.2f}'}
-		# candles_hlc		: {self.candles}
-		# market_side		: {self.market_side}''')
+		# binnacle ={
+		# 	'timestamp'			: self.timestamp,
+		# 	'index_id'			: self.index_id,
+		# 	'order_id'			: self.order_id,
+		# 	'operation_type'	: (self.operation_type),
+		# 	'pyramid_count'		: self.pyramid_counter,
+		# 	'entry_price'		: f'{self.entry_price:.2f}',
+		# 	'entry_am_base'		: f'{self.entry_amount_base:.8f}',
+		# 	'entry_am_quoted'	: f'{self.entry_amount_quoted:.2f}',
+		# 	'takeprofit'		: f'{self.take_profit_price:.2f}',
+		# 	'stoploss'			: f'{self.stop_loss_price:.2f}',
+		# 	'margin_call'		: f'{self.margin_call:.2f}',
+		# 	'leverage'			: self.LEVERAGE,
+		# 	'sub_operation'		: self.sub_operation,
+		# 	'operation_result'	: self.operation_result,
+		# 	'profit_loss'		: f'{self.pL:.2f}',
+		# 	'wallet'			: f'{self.wallet:.2f}',
+		# 	'balance'			: f'{self.balance:.2f}',
+		# 	'candles_hlc'		: self.candles,
+		# 	'market_side'		: self.market_side
+		# }
+		# self.archive.append(binnacle)
+		print(f'''
+		timestamp		: {self.timestamp}
+		index_id		: {self.index_id}
+		order_id		: {self.order_id}
+		operation_type	: {self.operation_type}
+		pyramid_count	: {self.pyramid_counter}
+		entry_price		: {f'{self.entry_price:.2f}'}
+		entry_am_base	: {f'{self.entry_amount_base:.8f}'}
+		entry_am_quoted : {f'{self.entry_amount_quoted:.2f}'}
+		takeprofit		: {f'{self.take_profit_price:.2f}'}
+		stoploss		: {f'{self.stop_loss_price:.2f}'}
+		margin_call		: {f'{self.margin_call:.2f}'}
+		leverage		: {self.LEVERAGE}
+		sub_operation	: {self.sub_operation}
+		operation_result: {self.operation_result}
+		profit_loss		: {f'{self.pL:.2f}'}
+		wallet			: {f'{self.wallet:.2f}'}
+		balance			: {f'{self.balance:.2f}'}
+		candles_hlc		: {self.candles}
+		market_side		: {self.market_side}''')
 
 		# *** Reset values
 		self.operation_type.clear()
@@ -420,8 +420,8 @@ class Backtester():
 				sys.exit()
 		# *** *** *** *** *** OUT OF FOR CICLE, in range(df) *** *** *** *** ***
 
-		if self.showBinnacle:
-			self.binnaclePrint()
+		""" if self.showBinnacle:
+			self.binnaclePrint() """
 
 		if self.plotOnNewWindow:
 			self.__plot__(df)
