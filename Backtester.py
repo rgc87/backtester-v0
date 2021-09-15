@@ -16,11 +16,11 @@ class Backtester():
 		self.INITIAL_BALANCE 	= initial_balance
 		self.balance 			= initial_balance		#Track closed operations only!
 		self.wallet				= initial_balance		#Track operations on Open
+
 		#Base asset, entry amount
 		self.amount 			= 0
 		self.LEVERAGE 			= leverage
 		self.FEE_COST 			= 0.02 / 100			#Binance
-
 		self.ENTRY_AMOUNT_P 	= entry_amount_p		#Entry amount, percentage constant
 
 		#Quoted asset, entry amount
@@ -37,7 +37,6 @@ class Backtester():
 		self.num_operations 	= 0
 		self.num_longs 			= 0
 		self.num_shorts 		= 0
-
 		self.is_long_open 		= False
 		self.is_short_open 		= False
 
@@ -61,8 +60,6 @@ class Backtester():
 
 
 	def binnacle(self):
-		# *** Storage dictionary on a list
-
 		if len(self.operation_type) >0:
 			if 'Entry Long' in self.operation_type[0]:
 				self.market_side = 'Bull'
@@ -73,6 +70,7 @@ class Backtester():
 			(self.take_profit_price == 0 and self.stop_loss_price == 0):
 				self.market_side = 'Out of market'
 
+		# *** Storage on dictionary
 		binnacle ={
 			'timestamp'			: self.timestamp,
 			'index_id'			: self.index_id,
@@ -115,34 +113,34 @@ class Backtester():
 		# balance			: {f'{self.balance:.2f}'}
 		# candles_hlc		: {self.candles}
 		# market_side		: {self.market_side}''')
+
 		# *** Reset values
 		self.operation_type.clear()
 		self.flags.clear()
 
 
 	def binnaclePrint(self):
-		# self.archive
-		for b in self.archive[100:105]:
-				print(f'''
-				timestamp		:{b['timestamp']}
-				index_id		:{b['index_id']}
-				order_id		:{b['order_id']}
-				operation_type	:{b['operation_type']}
-				pyramid_count	:{b['pyramid_count']}
-				entry_price		:{b['entry_price']}
-				entry_am_base	:{b['entry_am_base']}
-				entry_am_quoted	:{b['entry_am_quoted']}
-				takeprofit		:{b['takeprofit']}
-				stoploss		:{b['stoploss']}
-				margin_call		:{b['margin_call']}
-				leverage		:{b['leverage']}
-				sub_operation	:{b['sub_operation']}
-				operation_result:{b['operation_result']}
-				profit_loss		:{b['profit_loss']}
-				wallet			:{b['wallet']}
-				balance			:{b['balance']}
-				candles_hlc		:{b['candles_hlc']}
-				market_side		:{b['market_side']}''')
+		for b in self.archive[100:-1]:
+			print(f'''
+			timestamp		:{b['timestamp']}
+			index_id		:{b['index_id']}
+			order_id		:{b['order_id']}
+			operation_type	:{b['operation_type']}
+			pyramid_count	:{b['pyramid_count']}
+			entry_price		:{b['entry_price']}
+			entry_am_base	:{b['entry_am_base']}
+			entry_am_quoted	:{b['entry_am_quoted']}
+			takeprofit		:{b['takeprofit']}
+			stoploss		:{b['stoploss']}
+			margin_call		:{b['margin_call']}
+			leverage		:{b['leverage']}
+			sub_operation	:{b['sub_operation']}
+			operation_result:{b['operation_result']}
+			profit_loss		:{b['profit_loss']}
+			wallet			:{b['wallet']}
+			balance			:{b['balance']}
+			candles_hlc		:{b['candles_hlc']}
+			market_side		:{b['market_side']}''')
 
 
 	def reset_results(self):
