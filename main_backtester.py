@@ -6,22 +6,22 @@ import re
 
 
 # IMPORT DATA SOURCES
-pathFile = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
-df = pd.read_csv(pathFile)
-df = klinesFilter(df, tf='1h')
-df = df.iloc[29000:-1]
+pathFile    = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
+df          = pd.read_csv(pathFile)
+df          = klinesFilter(df, tf='1h')
+df          = df.iloc[30000:32000]
 
-start_date = df.index[0]
-end_date = df.index[-1]
-elapsed_time = start_date-end_date
+start_date  = df.index[0]
+end_date    = df.index[-1]
+elapsed_time= start_date-end_date
 
 # Show ROI
 first_price = df.close.iloc[0]
-last_price = df.close.iloc[-1]
-bh_roi = (( last_price / first_price )-1)*100
+last_price  = df.close.iloc[-1]
+bh_roi      = (( last_price / first_price )-1)*100
 
 pairNamePattern = re.compile('[A-Z]{6,}')
-symbol = pairNamePattern.search(pathFile).group()
+symbol          = pairNamePattern.search(pathFile).group()
 
 # STRATEGY SETUP
 bb_len          = 41
@@ -47,14 +47,14 @@ strategy.setUp(df)
 # *** ---------------------------------------------------------------
 # BACKTEST ATRIBUTES
 initial_balance     = 1000
-leverage            = 10
-trailing_stop_loss  = True
+leverage            = 5
+trailing_stop_loss  = False
 entry_amount_p      = 0.05
 
 showBinnacle        = True
 plotOnNewWindow     = False
 
-bullMarket          = False
+bullMarket          = True
 bearMarket          = True
 # *** ---------------------------------------------------------------
 tryback = Backtester(
@@ -96,12 +96,14 @@ parameters = {
     'bullMarket'          : bullMarket,
     'bearMarket'          : bearMarket
 }
-output      = tryback.return_results(symbol, start_date, end_date)
-results     = pd.DataFrame.from_dict(output, orient='index')
-gross_profit= output['balance']
-net_profit  = output['profit_after_fees']
-strategy_roi= ( ((net_profit+initial_balance) / initial_balance)-1 ) *100
-print(results)
+output          =    tryback.return_results(symbol, start_date, end_date)
+# results            = pd.DataFrame.from_dict(output, orient='index')
+gross_profit    =    output['balance']
+net_profit      =    output['profit_after_fees']
+strategy_roi    =    ( ((net_profit+initial_balance) / initial_balance)-1 ) *100
+print(
+    pd.DataFrame.from_dict(output, orient='index')
+)
 print(genes)
 print(parameters)
 print(f"""

@@ -1,0 +1,7224 @@
+
+		timestamp		: 2021-01-25 07:00:00
+		index_id		: 57
+		order_id		: 0
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1000.00
+		balance			: 1000.00
+		candles_hlc		: [33562.04, 33045.0, 33346.95]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-25 08:00:00
+		index_id		: 58
+		order_id		: 1
+		operation_type	: ['Entry Short, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 33448.21
+		entry_am_base	: 0.00747424
+		entry_am_quoted : 250.00
+		takeprofit		: 30437.87
+		stoploss		: 34786.14
+		margin_call		: 60541.26
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 950.00
+		balance			: 1000.00
+		candles_hlc		: [33497.88, 33188.99, 33448.21]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 09:00:00
+		index_id		: 59
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30437.87
+		stoploss		: 34786.14
+		margin_call		: 60541.26
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 950.00
+		balance			: 1000.00
+		candles_hlc		: [33548.0, 32800.0, 32979.1]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 10:00:00
+		index_id		: 60
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30437.87
+		stoploss		: 34786.14
+		margin_call		: 60541.26
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 950.00
+		balance			: 1000.00
+		candles_hlc		: [33166.0, 32750.09, 33117.43]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 11:00:00
+		index_id		: 61
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30437.87
+		stoploss		: 34786.14
+		margin_call		: 60541.26
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 950.00
+		balance			: 1000.00
+		candles_hlc		: [33334.57, 33040.0, 33185.26]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 12:00:00
+		index_id		: 62
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30437.87
+		stoploss		: 34786.14
+		margin_call		: 60541.26
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 950.00
+		balance			: 1000.00
+		candles_hlc		: [34300.0, 33050.0, 34180.01]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 13:00:00
+		index_id		: 63
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30437.87
+		stoploss		: 34786.14
+		margin_call		: 60541.26
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 950.00
+		balance			: 1000.00
+		candles_hlc		: [34693.93, 34098.59, 34544.49]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 14:00:00
+		index_id		: 64
+		order_id		: 1
+		operation_type	: ['Exit Short by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -10.00
+		wallet			: 990.00
+		balance			: 990.00
+		candles_hlc		: [34875.0, 34280.45, 34467.43]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 15:00:00
+		index_id		: 65
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 990.00
+		balance			: 990.00
+		candles_hlc		: [34588.88, 34202.69, 34458.31]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-25 16:00:00
+		index_id		: 66
+		order_id		: 1
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 990.00
+		balance			: 990.00
+		candles_hlc		: [34600.0, 33630.57, 33910.96]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-25 17:00:00
+		index_id		: 67
+		order_id		: 2
+		operation_type	: ['Entry Short, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 33784.36
+		entry_am_base	: 0.00732588
+		entry_am_quoted : 247.50
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [34246.66, 33700.75, 33784.36]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 18:00:00
+		index_id		: 68
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [34031.56, 33519.0, 33672.46]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 19:00:00
+		index_id		: 69
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [33788.38, 33373.92, 33411.54]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 20:00:00
+		index_id		: 70
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [33473.92, 33061.12, 33470.2]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 21:00:00
+		index_id		: 71
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [33464.21, 32155.28, 32718.08]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 22:00:00
+		index_id		: 72
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32732.99, 31910.0, 32462.36]
+		market_side		: Bear
+
+		timestamp		: 2021-01-25 23:00:00
+		index_id		: 73
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32650.0, 32201.44, 32254.2]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 00:00:00
+		index_id		: 74
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32793.01, 31758.0, 32474.33]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 01:00:00
+		index_id		: 75
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32827.33, 32210.01, 32758.85]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 02:00:00
+		index_id		: 76
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32765.41, 32230.29, 32307.97]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 03:00:00
+		index_id		: 77
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32363.93, 31458.0, 31518.66]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 04:00:00
+		index_id		: 78
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32181.9, 31424.71, 32000.01]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 05:00:00
+		index_id		: 79
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32312.46, 31784.87, 32062.32]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 06:00:00
+		index_id		: 80
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32073.99, 31311.93, 31581.73]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 07:00:00
+		index_id		: 81
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31782.08, 31100.0, 31643.61]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 08:00:00
+		index_id		: 82
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31981.99, 31527.86, 31896.97]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 09:00:00
+		index_id		: 83
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32075.0, 31373.0, 31804.77]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 10:00:00
+		index_id		: 84
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32450.0, 31804.78, 32246.68]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 11:00:00
+		index_id		: 85
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32249.98, 31650.0, 31796.95]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 12:00:00
+		index_id		: 86
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31972.73, 31229.45, 31296.94]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 13:00:00
+		index_id		: 87
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31920.0, 31201.0, 31718.97]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 14:00:00
+		index_id		: 88
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31780.6, 30837.37, 31257.73]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 15:00:00
+		index_id		: 89
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31885.02, 31252.0, 31750.23]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 16:00:00
+		index_id		: 90
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32122.81, 31300.69, 31985.3]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 17:00:00
+		index_id		: 91
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32235.0, 31895.61, 32184.36]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 18:00:00
+		index_id		: 92
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32350.0, 31861.22, 32224.5]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 19:00:00
+		index_id		: 93
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32403.88, 32035.93, 32208.33]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 20:00:00
+		index_id		: 94
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32395.0, 31855.71, 31986.99]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 21:00:00
+		index_id		: 95
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32322.23, 31900.0, 31987.13]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 22:00:00
+		index_id		: 96
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32733.81, 31890.0, 32733.81]
+		market_side		: Bear
+
+		timestamp		: 2021-01-26 23:00:00
+		index_id		: 97
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32921.88, 32454.84, 32467.77]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 00:00:00
+		index_id		: 98
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32557.29, 31880.0, 32335.7]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 01:00:00
+		index_id		: 99
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32457.79, 31955.39, 32084.6]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 02:00:00
+		index_id		: 100
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32263.56, 31758.92, 31802.36]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 03:00:00
+		index_id		: 101
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31916.66, 31568.28, 31800.86]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 04:00:00
+		index_id		: 102
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [32030.28, 31518.19, 31864.36]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 05:00:00
+		index_id		: 103
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31918.71, 31365.41, 31503.41]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 06:00:00
+		index_id		: 104
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31725.0, 31350.0, 31669.98]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 07:00:00
+		index_id		: 105
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31890.19, 31547.41, 31743.33]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 08:00:00
+		index_id		: 106
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31749.28, 31142.33, 31172.11]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 09:00:00
+		index_id		: 107
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31290.0, 30755.0, 31201.05]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 10:00:00
+		index_id		: 108
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30743.77
+		stoploss		: 35135.73
+		margin_call		: 61149.69
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 940.50
+		balance			: 990.00
+		candles_hlc		: [31400.0, 31080.77, 31376.9]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 11:00:00
+		index_id		: 109
+		order_id		: 2
+		operation_type	: ['Exit Short by takeprofit']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** WINNED *** ***
+		profit_loss		: 22.27
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [31615.38, 30578.94, 30639.05]
+		market_side		: Bear
+
+		timestamp		: 2021-01-27 12:00:00
+		index_id		: 110
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30888.0, 30336.18, 30759.03]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 13:00:00
+		index_id		: 111
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [31057.0, 30245.0, 30275.3]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 14:00:00
+		index_id		: 112
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30520.0, 29241.72, 29573.15]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 15:00:00
+		index_id		: 113
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30464.93, 29390.0, 30322.61]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 16:00:00
+		index_id		: 114
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30948.0, 30216.37, 30529.57]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 17:00:00
+		index_id		: 115
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30845.81, 30101.43, 30514.34]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 18:00:00
+		index_id		: 116
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30537.5, 29500.0, 29709.79]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 19:00:00
+		index_id		: 117
+		order_id		: 2
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1012.27
+		balance			: 1012.27
+		candles_hlc		: [30850.0, 29712.94, 30740.33]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 20:00:00
+		index_id		: 118
+		order_id		: 3
+		operation_type	: ['Entry Long, first*', 'Exit Long by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 31520.20
+		entry_am_base	: 0.00802878
+		entry_am_quoted : 253.07
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -7.59
+		wallet			: 1004.68
+		balance			: 1004.68
+		candles_hlc		: [31556.0, 30512.19, 31520.2]
+		market_side		: Bull
+
+		timestamp		: 2021-01-27 21:00:00
+		index_id		: 119
+		order_id		: 3
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.68
+		balance			: 1004.68
+		candles_hlc		: [31649.99, 30735.01, 30958.0]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 22:00:00
+		index_id		: 120
+		order_id		: 3
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.68
+		balance			: 1004.68
+		candles_hlc		: [31051.46, 30325.01, 30519.93]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-27 23:00:00
+		index_id		: 121
+		order_id		: 3
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.68
+		balance			: 1004.68
+		candles_hlc		: [30727.14, 30084.24, 30366.15]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-28 00:00:00
+		index_id		: 122
+		order_id		: 3
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.68
+		balance			: 1004.68
+		candles_hlc		: [30728.57, 29842.1, 30671.86]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-28 01:00:00
+		index_id		: 123
+		order_id		: 4
+		operation_type	: ['Entry Long, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 30881.94
+		entry_am_base	: 0.00813326
+		entry_am_quoted : 251.17
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [30917.53, 30370.79, 30881.94]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 02:00:00
+		index_id		: 124
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31214.51, 30788.3, 30981.72]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 03:00:00
+		index_id		: 125
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31526.78, 30902.81, 31404.25]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 04:00:00
+		index_id		: 126
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31590.0, 31045.7, 31300.73]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 05:00:00
+		index_id		: 127
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31800.0, 31057.96, 31729.16]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 06:00:00
+		index_id		: 128
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31876.63, 31521.37, 31564.58]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 07:00:00
+		index_id		: 129
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31597.76, 31080.0, 31170.53]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 08:00:00
+		index_id		: 130
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31303.15, 31001.55, 31070.47]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 09:00:00
+		index_id		: 131
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31483.44, 30812.26, 31466.91]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 10:00:00
+		index_id		: 132
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31585.39, 31030.0, 31490.29]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 11:00:00
+		index_id		: 133
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31600.0, 31178.8, 31437.37]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 12:00:00
+		index_id		: 134
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31713.43, 31273.54, 31477.95]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 13:00:00
+		index_id		: 135
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [31840.0, 31161.96, 31775.12]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 14:00:00
+		index_id		: 136
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32150.0, 31612.52, 31830.53]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 15:00:00
+		index_id		: 137
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32203.38, 31680.69, 31926.49]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 16:00:00
+		index_id		: 138
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32436.58, 31650.0, 32425.71]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 17:00:00
+		index_id		: 139
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32490.0, 32160.06, 32281.49]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 18:00:00
+		index_id		: 140
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32670.0, 32103.44, 32633.68]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 19:00:00
+		index_id		: 141
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32747.78, 32458.81, 32564.71]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 20:00:00
+		index_id		: 142
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [32900.0, 32392.34, 32577.96]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 21:00:00
+		index_id		: 143
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33352.50
+		stoploss		: 29955.48
+		margin_call		: 25014.37
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.45
+		balance			: 1004.68
+		candles_hlc		: [33295.55, 32577.96, 33183.53]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 22:00:00
+		index_id		: 144
+		order_id		: 4
+		operation_type	: ['Exit Long by takeprofit']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** WINNED *** ***
+		profit_loss		: 20.09
+		wallet			: 1024.78
+		balance			: 1024.78
+		candles_hlc		: [33488.66, 33126.02, 33469.67]
+		market_side		: Bull
+
+		timestamp		: 2021-01-28 23:00:00
+		index_id		: 145
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1024.78
+		balance			: 1024.78
+		candles_hlc		: [33783.98, 33026.0, 33364.86]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 00:00:00
+		index_id		: 146
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1024.78
+		balance			: 1024.78
+		candles_hlc		: [34310.0, 33330.93, 34150.23]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 01:00:00
+		index_id		: 147
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1024.78
+		balance			: 1024.78
+		candles_hlc		: [34304.52, 33666.66, 33906.57]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 02:00:00
+		index_id		: 148
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1024.78
+		balance			: 1024.78
+		candles_hlc		: [34201.14, 33770.0, 33969.2]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 03:00:00
+		index_id		: 149
+		order_id		: 4
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1024.78
+		balance			: 1024.78
+		candles_hlc		: [34114.95, 33501.0, 33733.58]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 04:00:00
+		index_id		: 150
+		order_id		: 5
+		operation_type	: ['Entry Short, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 33062.82
+		entry_am_base	: 0.00774871
+		entry_am_quoted : 256.19
+		takeprofit		: 30087.17
+		stoploss		: 34385.33
+		margin_call		: 59843.70
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 973.54
+		balance			: 1024.78
+		candles_hlc		: [33934.48, 32750.47, 33062.82]
+		market_side		: Bear
+
+		timestamp		: 2021-01-29 05:00:00
+		index_id		: 151
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30087.17
+		stoploss		: 34385.33
+		margin_call		: 59843.70
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 973.54
+		balance			: 1024.78
+		candles_hlc		: [33193.57, 32755.56, 32980.32]
+		market_side		: Bear
+
+		timestamp		: 2021-01-29 06:00:00
+		index_id		: 152
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30087.17
+		stoploss		: 34385.33
+		margin_call		: 59843.70
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 973.54
+		balance			: 1024.78
+		candles_hlc		: [32982.33, 32330.55, 32483.74]
+		market_side		: Bear
+
+		timestamp		: 2021-01-29 07:00:00
+		index_id		: 153
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 30087.17
+		stoploss		: 34385.33
+		margin_call		: 59843.70
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 973.54
+		balance			: 1024.78
+		candles_hlc		: [32626.98, 31915.4, 32266.35]
+		market_side		: Bear
+
+		timestamp		: 2021-01-29 08:00:00
+		index_id		: 154
+		order_id		: 5
+		operation_type	: ['Exit Short by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -10.25
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [36600.0, 32006.91, 36240.24]
+		market_side		: Bear
+
+		timestamp		: 2021-01-29 09:00:00
+		index_id		: 155
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [37990.0, 34591.83, 36877.16]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 10:00:00
+		index_id		: 156
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [37200.0, 35489.41, 36617.23]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 11:00:00
+		index_id		: 157
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [37208.94, 36421.93, 37025.32]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 12:00:00
+		index_id		: 158
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [37869.0, 36534.42, 37840.07]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 13:00:00
+		index_id		: 159
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [38531.9, 36979.32, 38250.03]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 14:00:00
+		index_id		: 160
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [38448.39, 36456.78, 37058.49]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 15:00:00
+		index_id		: 161
+		order_id		: 5
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1014.53
+		balance			: 1014.53
+		candles_hlc		: [37517.8, 36700.0, 37129.4]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 16:00:00
+		index_id		: 162
+		order_id		: 6
+		operation_type	: ['Entry Short, first*', 'Exit Short by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 36039.18
+		entry_am_base	: 0.00703768
+		entry_am_quoted : 253.63
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -10.15
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [37569.0, 35808.0, 36039.18]
+		market_side		: Bear
+
+		timestamp		: 2021-01-29 17:00:00
+		index_id		: 163
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [36429.0, 35564.0, 35741.23]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 18:00:00
+		index_id		: 164
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [35999.99, 34600.0, 35202.46]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 19:00:00
+		index_id		: 165
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [35357.14, 33500.0, 34318.57]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 20:00:00
+		index_id		: 166
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34953.87, 33843.22, 34574.61]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 21:00:00
+		index_id		: 167
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34813.0, 34120.0, 34635.53]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 22:00:00
+		index_id		: 168
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [35354.94, 34250.0, 34485.98]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-29 23:00:00
+		index_id		: 169
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34640.19, 33700.0, 34252.2]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 00:00:00
+		index_id		: 170
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34861.56, 34214.91, 34250.1]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 01:00:00
+		index_id		: 171
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34933.0, 33927.0, 34123.05]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 02:00:00
+		index_id		: 172
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34443.96, 33674.7, 33862.51]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 03:00:00
+		index_id		: 173
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34000.0, 32825.0, 33273.36]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 04:00:00
+		index_id		: 174
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33656.08, 33001.52, 33503.13]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 05:00:00
+		index_id		: 175
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33986.4, 33174.55, 33503.72]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 06:00:00
+		index_id		: 176
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33850.0, 33137.8, 33809.79]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 07:00:00
+		index_id		: 177
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34200.0, 33400.0, 34046.8]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 08:00:00
+		index_id		: 178
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34358.97, 33775.44, 33887.5]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 09:00:00
+		index_id		: 179
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34424.7, 33809.39, 34253.18]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 10:00:00
+		index_id		: 180
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34392.0, 33870.95, 34299.82]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 11:00:00
+		index_id		: 181
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34328.59, 33510.0, 33660.4]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 12:00:00
+		index_id		: 182
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33832.78, 33410.63, 33751.77]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 13:00:00
+		index_id		: 183
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34349.63, 33666.67, 34237.69]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 14:00:00
+		index_id		: 184
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34400.0, 34000.0, 34234.73]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 15:00:00
+		index_id		: 185
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34500.0, 34057.22, 34210.2]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 16:00:00
+		index_id		: 186
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34262.35, 33520.0, 33956.7]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 17:00:00
+		index_id		: 187
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34290.44, 33943.0, 34253.67]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 18:00:00
+		index_id		: 188
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34351.0, 34110.12, 34340.0]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 19:00:00
+		index_id		: 189
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34400.02, 34028.87, 34286.5]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 20:00:00
+		index_id		: 190
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34449.69, 34080.0, 34154.63]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 21:00:00
+		index_id		: 191
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34690.0, 33966.4, 34675.53]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 22:00:00
+		index_id		: 192
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34800.0, 34516.78, 34526.13]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-30 23:00:00
+		index_id		: 193
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34553.51, 34164.78, 34262.88]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 00:00:00
+		index_id		: 194
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34342.69, 33850.0, 34066.84]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 01:00:00
+		index_id		: 195
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34249.99, 33940.0, 34194.0]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 02:00:00
+		index_id		: 196
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34238.0, 33681.0, 33750.0]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 03:00:00
+		index_id		: 197
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34042.0, 33655.0, 33930.21]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 04:00:00
+		index_id		: 198
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34127.65, 33794.27, 34034.31]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 05:00:00
+		index_id		: 199
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [34056.64, 33678.46, 33756.39]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 06:00:00
+		index_id		: 200
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33857.88, 33571.42, 33655.86]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 07:00:00
+		index_id		: 201
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33846.27, 33450.0, 33607.98]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 08:00:00
+		index_id		: 202
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33832.94, 33312.12, 33596.72]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 09:00:00
+		index_id		: 203
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33769.93, 33270.0, 33301.7]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 10:00:00
+		index_id		: 204
+		order_id		: 6
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 1004.38
+		balance			: 1004.38
+		candles_hlc		: [33744.88, 33205.0, 33653.68]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 11:00:00
+		index_id		: 205
+		order_id		: 7
+		operation_type	: ['Entry Long, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 33563.23
+		entry_am_base	: 0.00748128
+		entry_am_quoted : 251.10
+		takeprofit		: 36248.29
+		stoploss		: 32556.33
+		margin_call		: 27186.22
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.16
+		balance			: 1004.38
+		candles_hlc		: [33784.4, 33469.38, 33563.23]
+		market_side		: Bull
+
+		timestamp		: 2021-01-31 12:00:00
+		index_id		: 206
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36248.29
+		stoploss		: 32556.33
+		margin_call		: 27186.22
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.16
+		balance			: 1004.38
+		candles_hlc		: [34220.0, 33366.29, 33974.05]
+		market_side		: Bull
+
+		timestamp		: 2021-01-31 13:00:00
+		index_id		: 207
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36248.29
+		stoploss		: 32556.33
+		margin_call		: 27186.22
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.16
+		balance			: 1004.38
+		candles_hlc		: [34050.0, 33607.95, 33692.92]
+		market_side		: Bull
+
+		timestamp		: 2021-01-31 14:00:00
+		index_id		: 208
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36248.29
+		stoploss		: 32556.33
+		margin_call		: 27186.22
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 954.16
+		balance			: 1004.38
+		candles_hlc		: [33735.54, 33318.02, 33330.71]
+		market_side		: Bull
+
+		timestamp		: 2021-01-31 15:00:00
+		index_id		: 209
+		order_id		: 7
+		operation_type	: ['Exit Long by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -7.53
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [33470.0, 32554.0, 32862.66]
+		market_side		: Bull
+
+		timestamp		: 2021-01-31 16:00:00
+		index_id		: 210
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [33073.55, 32555.0, 32891.86]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 17:00:00
+		index_id		: 211
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [33077.9, 32200.0, 32302.31]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 18:00:00
+		index_id		: 212
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [32849.71, 32171.67, 32450.3]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 19:00:00
+		index_id		: 213
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [32926.25, 32400.27, 32808.8]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 20:00:00
+		index_id		: 214
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [32931.55, 32461.23, 32853.73]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 21:00:00
+		index_id		: 215
+		order_id		: 7
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 996.85
+		balance			: 996.85
+		candles_hlc		: [32899.39, 32515.0, 32560.73]
+		market_side		: Out of market
+
+		timestamp		: 2021-01-31 22:00:00
+		index_id		: 216
+		order_id		: 8
+		operation_type	: ['Entry Long, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 32974.10
+		entry_am_base	: 0.00755783
+		entry_am_quoted : 249.21
+		takeprofit		: 35612.03
+		stoploss		: 31984.88
+		margin_call		: 26709.02
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 947.01
+		balance			: 996.85
+		candles_hlc		: [33088.88, 32559.85, 32974.1]
+		market_side		: Bull
+
+		timestamp		: 2021-01-31 23:00:00
+		index_id		: 217
+		order_id		: 8
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 35612.03
+		stoploss		: 31984.88
+		margin_call		: 26709.02
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 947.01
+		balance			: 996.85
+		candles_hlc		: [33255.49, 32933.54, 33092.98]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 00:00:00
+		index_id		: 218
+		order_id		: 8
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 35612.03
+		stoploss		: 31984.88
+		margin_call		: 26709.02
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 947.01
+		balance			: 996.85
+		candles_hlc		: [33106.33, 32296.16, 32546.27]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 01:00:00
+		index_id		: 219
+		order_id		: 9
+		operation_type	: ['Entry Long, pyramid**']
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 33202.19
+		entry_am_base	: 0.01463979
+		entry_am_quoted : 236.75
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33560.9, 32476.34, 33430.29]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 02:00:00
+		index_id		: 220
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33830.0, 33222.88, 33649.73]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 03:00:00
+		index_id		: 221
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33776.81, 33470.0, 33573.97]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 04:00:00
+		index_id		: 222
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33943.55, 33423.43, 33558.25]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 05:00:00
+		index_id		: 223
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33888.33, 33429.36, 33755.4]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 06:00:00
+		index_id		: 224
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34427.0, 33284.24, 33518.89]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 07:00:00
+		index_id		: 225
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33885.39, 33390.12, 33803.97]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 08:00:00
+		index_id		: 226
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34500.0, 33589.23, 34477.31]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 09:00:00
+		index_id		: 227
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34717.27, 34268.62, 34354.47]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 10:00:00
+		index_id		: 228
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34539.94, 34012.41, 34163.28]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 11:00:00
+		index_id		: 229
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34400.0, 33935.47, 34183.33]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 12:00:00
+		index_id		: 230
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34460.0, 33590.0, 33770.23]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 13:00:00
+		index_id		: 231
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34050.0, 33655.0, 33702.25]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 14:00:00
+		index_id		: 232
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33866.49, 33400.0, 33532.81]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 15:00:00
+		index_id		: 233
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33638.99, 33160.0, 33160.17]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 16:00:00
+		index_id		: 234
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33603.91, 33133.26, 33460.83]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 17:00:00
+		index_id		: 235
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34100.0, 33380.0, 33978.31]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 18:00:00
+		index_id		: 236
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34032.93, 33655.01, 33731.52]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 19:00:00
+		index_id		: 237
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34072.54, 33700.3, 33838.13]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 20:00:00
+		index_id		: 238
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34039.0, 33722.04, 33831.55]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 21:00:00
+		index_id		: 239
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33848.95, 33549.0, 33658.67]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 22:00:00
+		index_id		: 240
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33789.73, 33511.0, 33539.39]
+		market_side		: Bull
+
+		timestamp		: 2021-02-01 23:00:00
+		index_id		: 241
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33768.0, 33430.76, 33526.37]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 00:00:00
+		index_id		: 242
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34161.39, 33418.0, 33763.07]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 01:00:00
+		index_id		: 243
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33800.96, 33509.0, 33744.71]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 02:00:00
+		index_id		: 244
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33876.73, 33555.49, 33646.0]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 03:00:00
+		index_id		: 245
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33700.0, 33501.25, 33550.32]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 04:00:00
+		index_id		: 246
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [33963.29, 33500.0, 33876.37]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 05:00:00
+		index_id		: 247
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34100.0, 33770.0, 33992.83]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 06:00:00
+		index_id		: 248
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34321.61, 33924.73, 34295.01]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 07:00:00
+		index_id		: 249
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34400.0, 34136.02, 34223.38]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 08:00:00
+		index_id		: 250
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [34683.63, 34080.0, 34663.87]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 09:00:00
+		index_id		: 251
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [35668.1, 34663.87, 35334.04]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 10:00:00
+		index_id		: 252
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [35434.7, 34910.48, 35160.24]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 11:00:00
+		index_id		: 253
+		order_id		: 9
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36104.71
+		stoploss		: 32427.38
+		margin_call		: 26893.78
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 899.66
+		balance			: 996.85
+		candles_hlc		: [35284.49, 34601.0, 34720.15]
+		market_side		: Bull
+
+		timestamp		: 2021-02-02 12:00:00
+		index_id		: 254
+		order_id		: 10
+		operation_type	: ['Entry Short, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 34779.91
+		entry_am_base	: 0.00733145
+		entry_am_quoted : 254.99
+		takeprofit		: 31649.72
+		stoploss		: 36171.11
+		margin_call		: 62951.64
+		leverage		: 5
+		sub_operation	: ['Close previous, long']
+		operation_result: *** *** WINNED *** ***
+		profit_loss		: 23.10
+		wallet			: 968.95
+		balance			: 1019.95
+		candles_hlc		: [35000.0, 34524.2, 34779.91]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 13:00:00
+		index_id		: 255
+		order_id		: 10
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31649.72
+		stoploss		: 36171.11
+		margin_call		: 62951.64
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 968.95
+		balance			: 1019.95
+		candles_hlc		: [35200.0, 34731.7, 34844.73]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 14:00:00
+		index_id		: 256
+		order_id		: 11
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 34786.95
+		entry_am_base	: 0.01429350
+		entry_am_quoted : 242.24
+		takeprofit		: 31662.53
+		stoploss		: 36185.75
+		margin_call		: 62964.38
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 920.50
+		balance			: 1019.95
+		candles_hlc		: [34932.5, 34333.0, 34793.99]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 15:00:00
+		index_id		: 257
+		order_id		: 11
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31662.53
+		stoploss		: 36185.75
+		margin_call		: 62964.38
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 920.50
+		balance			: 1019.95
+		candles_hlc		: [35151.0, 34548.26, 34708.47]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 16:00:00
+		index_id		: 258
+		order_id		: 11
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31662.53
+		stoploss		: 36185.75
+		margin_call		: 62964.38
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 920.50
+		balance			: 1019.95
+		candles_hlc		: [35175.31, 34556.85, 34964.52]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 17:00:00
+		index_id		: 259
+		order_id		: 12
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 34819.21
+		entry_am_base	: 0.02089654
+		entry_am_quoted : 230.13
+		takeprofit		: 31714.84
+		stoploss		: 36245.53
+		margin_call		: 63022.77
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 874.48
+		balance			: 1019.95
+		candles_hlc		: [35021.85, 34738.0, 34851.47]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 18:00:00
+		index_id		: 260
+		order_id		: 12
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31714.84
+		stoploss		: 36245.53
+		margin_call		: 63022.77
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 874.48
+		balance			: 1019.95
+		candles_hlc		: [35308.23, 34790.0, 35264.21]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 19:00:00
+		index_id		: 261
+		order_id		: 12
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31714.84
+		stoploss		: 36245.53
+		margin_call		: 63022.77
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 874.48
+		balance			: 1019.95
+		candles_hlc		: [35800.0, 35090.91, 35762.03]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 20:00:00
+		index_id		: 262
+		order_id		: 12
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31714.84
+		stoploss		: 36245.53
+		margin_call		: 63022.77
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 874.48
+		balance			: 1019.95
+		candles_hlc		: [35984.33, 35525.1, 35786.51]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 21:00:00
+		index_id		: 263
+		order_id		: 12
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31714.84
+		stoploss		: 36245.53
+		margin_call		: 63022.77
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 874.48
+		balance			: 1019.95
+		candles_hlc		: [35896.49, 35558.9, 35653.07]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 22:00:00
+		index_id		: 264
+		order_id		: 12
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 31714.84
+		stoploss		: 36245.53
+		margin_call		: 63022.77
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 874.48
+		balance			: 1019.95
+		candles_hlc		: [35812.49, 35530.0, 35572.36]
+		market_side		: Bear
+
+		timestamp		: 2021-02-02 23:00:00
+		index_id		: 265
+		order_id		: 13
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 3
+		flags			: []
+		entry_price		: 35142.72
+		entry_am_base	: 0.02706070
+		entry_am_quoted : 218.62
+		takeprofit		: 32274.28
+		stoploss		: 36884.89
+		margin_call		: 63608.33
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 830.75
+		balance			: 1019.95
+		candles_hlc		: [35699.38, 35466.0, 35466.24]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 00:00:00
+		index_id		: 266
+		order_id		: 13
+		operation_type	: []
+		pyramid_count	: 3
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 32274.28
+		stoploss		: 36884.89
+		margin_call		: 63608.33
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 830.75
+		balance			: 1019.95
+		candles_hlc		: [36240.0, 35362.38, 36135.01]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 01:00:00
+		index_id		: 267
+		order_id		: 13
+		operation_type	: []
+		pyramid_count	: 3
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 32274.28
+		stoploss		: 36884.89
+		margin_call		: 63608.33
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 830.75
+		balance			: 1019.95
+		candles_hlc		: [36349.64, 35843.21, 35879.27]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 02:00:00
+		index_id		: 268
+		order_id		: 14
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 4
+		flags			: []
+		entry_price		: 35516.05
+		entry_am_base	: 0.03284761
+		entry_am_quoted : 207.69
+		takeprofit		: 32659.33
+		stoploss		: 37324.94
+		margin_call		: 64284.05
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 789.22
+		balance			: 1019.95
+		candles_hlc		: [36125.93, 35816.74, 35889.37]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 03:00:00
+		index_id		: 269
+		order_id		: 14
+		operation_type	: []
+		pyramid_count	: 4
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 32659.33
+		stoploss		: 37324.94
+		margin_call		: 64284.05
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 789.22
+		balance			: 1019.95
+		candles_hlc		: [36500.0, 35878.11, 36403.47]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 04:00:00
+		index_id		: 270
+		order_id		: 14
+		operation_type	: []
+		pyramid_count	: 4
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 32659.33
+		stoploss		: 37324.94
+		margin_call		: 64284.05
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 789.22
+		balance			: 1019.95
+		candles_hlc		: [36845.0, 36403.47, 36628.85]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 05:00:00
+		index_id		: 271
+		order_id		: 14
+		operation_type	: []
+		pyramid_count	: 4
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 32659.33
+		stoploss		: 37324.94
+		margin_call		: 64284.05
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 789.22
+		balance			: 1019.95
+		candles_hlc		: [36690.14, 36377.1, 36460.12]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 06:00:00
+		index_id		: 272
+		order_id		: 14
+		operation_type	: []
+		pyramid_count	: 4
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 32659.33
+		stoploss		: 37324.94
+		margin_call		: 64284.05
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 789.22
+		balance			: 1019.95
+		candles_hlc		: [36789.0, 36435.96, 36535.9]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 07:00:00
+		index_id		: 273
+		order_id		: 15
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 35906.81
+		entry_am_base	: 0.03828335
+		entry_am_quoted : 197.30
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36590.08, 36231.66, 36297.57]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 08:00:00
+		index_id		: 274
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36299.98, 35640.93, 36010.09]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 09:00:00
+		index_id		: 275
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36036.0, 35511.0, 35851.19]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 10:00:00
+		index_id		: 276
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36040.0, 35657.69, 35985.27]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 11:00:00
+		index_id		: 277
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36238.38, 35855.31, 35969.41]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 12:00:00
+		index_id		: 278
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36322.96, 35810.9, 36178.86]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 13:00:00
+		index_id		: 279
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36720.56, 35944.51, 36537.42]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 14:00:00
+		index_id		: 280
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36760.53, 36369.56, 36548.6]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 15:00:00
+		index_id		: 281
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [36917.27, 36540.79, 36850.0]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 16:00:00
+		index_id		: 282
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37221.42, 36643.07, 37146.67]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 17:00:00
+		index_id		: 283
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37179.69, 36929.0, 37176.86]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 18:00:00
+		index_id		: 284
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37200.0, 36688.0, 37114.14]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 19:00:00
+		index_id		: 285
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37136.0, 36788.88, 36788.89]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 20:00:00
+		index_id		: 286
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37075.7, 36644.44, 37039.88]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 21:00:00
+		index_id		: 287
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37420.51, 36965.52, 37256.97]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 22:00:00
+		index_id		: 288
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37509.74, 37232.72, 37276.31]
+		market_side		: Bear
+
+		timestamp		: 2021-02-03 23:00:00
+		index_id		: 289
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 5
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 33030.79
+		stoploss		: 37749.47
+		margin_call		: 64991.32
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 749.76
+		balance			: 1019.95
+		candles_hlc		: [37662.63, 37267.02, 37618.87]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 00:00:00
+		index_id		: 290
+		order_id		: 15
+		operation_type	: ['Exit Short by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -70.54
+		wallet			: 949.40
+		balance			: 949.40
+		candles_hlc		: [38128.0, 37615.93, 38063.15]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 01:00:00
+		index_id		: 291
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 949.40
+		balance			: 949.40
+		candles_hlc		: [38288.0, 37861.83, 38147.35]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-04 02:00:00
+		index_id		: 292
+		order_id		: 15
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 949.40
+		balance			: 949.40
+		candles_hlc		: [38215.4, 37505.51, 37896.36]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-04 03:00:00
+		index_id		: 293
+		order_id		: 16
+		operation_type	: ['Entry Short, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 37498.78
+		entry_am_base	: 0.00632957
+		entry_am_quoted : 237.35
+		takeprofit		: 34123.89
+		stoploss		: 38998.73
+		margin_call		: 67872.79
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 901.93
+		balance			: 949.40
+		candles_hlc		: [38015.5, 37363.17, 37498.78]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 04:00:00
+		index_id		: 294
+		order_id		: 16
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34123.89
+		stoploss		: 38998.73
+		margin_call		: 67872.79
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 901.93
+		balance			: 949.40
+		candles_hlc		: [37788.76, 37326.83, 37678.39]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 05:00:00
+		index_id		: 295
+		order_id		: 16
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34123.89
+		stoploss		: 38998.73
+		margin_call		: 67872.79
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 901.93
+		balance			: 949.40
+		candles_hlc		: [37924.35, 37479.03, 37578.23]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 06:00:00
+		index_id		: 296
+		order_id		: 16
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34123.89
+		stoploss		: 38998.73
+		margin_call		: 67872.79
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 901.93
+		balance			: 949.40
+		candles_hlc		: [38195.0, 37530.95, 38076.43]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 07:00:00
+		index_id		: 297
+		order_id		: 16
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34123.89
+		stoploss		: 38998.73
+		margin_call		: 67872.79
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 901.93
+		balance			: 949.40
+		candles_hlc		: [38175.69, 37800.0, 37843.4]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 08:00:00
+		index_id		: 298
+		order_id		: 16
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34123.89
+		stoploss		: 38998.73
+		margin_call		: 67872.79
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 901.93
+		balance			: 949.40
+		candles_hlc		: [38708.27, 37015.0, 37338.19]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 09:00:00
+		index_id		: 299
+		order_id		: 17
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 37504.00
+		entry_am_base	: 0.01234099
+		entry_am_quoted : 225.48
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37604.07, 36662.45, 37509.22]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 10:00:00
+		index_id		: 300
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37772.43, 37206.2, 37611.63]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 11:00:00
+		index_id		: 301
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37922.78, 37306.12, 37321.75]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 12:00:00
+		index_id		: 302
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37763.57, 37021.8, 37618.69]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 13:00:00
+		index_id		: 303
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37690.0, 37268.03, 37587.58]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 14:00:00
+		index_id		: 304
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37705.0, 36626.86, 36795.15]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 15:00:00
+		index_id		: 305
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [36965.34, 36161.95, 36564.23]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 16:00:00
+		index_id		: 306
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [36989.99, 36399.79, 36929.36]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 17:00:00
+		index_id		: 307
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37070.0, 36780.0, 36884.34]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 18:00:00
+		index_id		: 308
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37422.37, 36761.89, 37141.96]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 19:00:00
+		index_id		: 309
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37499.99, 36980.0, 37467.18]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 20:00:00
+		index_id		: 310
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37783.83, 37366.0, 37613.31]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 21:00:00
+		index_id		: 311
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37729.82, 37302.0, 37643.0]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 22:00:00
+		index_id		: 312
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37698.73, 36964.03, 37240.0]
+		market_side		: Bear
+
+		timestamp		: 2021-02-04 23:00:00
+		index_id		: 313
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37382.34, 36841.77, 36936.66]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 00:00:00
+		index_id		: 314
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37227.22, 36795.72, 36993.25]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 01:00:00
+		index_id		: 315
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37300.0, 36570.0, 36632.38]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 02:00:00
+		index_id		: 316
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [36990.0, 36570.0, 36958.28]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 03:00:00
+		index_id		: 317
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37400.0, 36909.71, 37366.02]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 04:00:00
+		index_id		: 318
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37499.0, 37187.81, 37266.78]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 05:00:00
+		index_id		: 319
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37350.33, 36995.27, 37065.97]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 06:00:00
+		index_id		: 320
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37658.0, 37021.8, 37375.52]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 07:00:00
+		index_id		: 321
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37727.22, 37374.38, 37653.98]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 08:00:00
+		index_id		: 322
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37800.0, 37392.71, 37705.27]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 09:00:00
+		index_id		: 323
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37769.85, 37211.85, 37251.07]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 10:00:00
+		index_id		: 324
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37655.44, 37200.0, 37395.91]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 11:00:00
+		index_id		: 325
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [37733.75, 37395.78, 37691.32]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 12:00:00
+		index_id		: 326
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [38151.69, 37527.14, 37850.36]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 13:00:00
+		index_id		: 327
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [38298.0, 37767.09, 38272.32]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 14:00:00
+		index_id		: 328
+		order_id		: 17
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34133.39
+		stoploss		: 39009.59
+		margin_call		: 67882.24
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 856.84
+		balance			: 949.40
+		candles_hlc		: [38310.12, 37960.73, 38095.02]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 15:00:00
+		index_id		: 329
+		order_id		: 18
+		operation_type	: ['Entry Short, pyramid**']
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 37732.38
+		entry_am_base	: 0.01798391
+		entry_am_quoted : 214.21
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [38288.19, 37871.42, 37960.76]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 16:00:00
+		index_id		: 330
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [38163.34, 37655.17, 37809.55]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 17:00:00
+		index_id		: 331
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [37950.0, 37733.0, 37894.61]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 18:00:00
+		index_id		: 332
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [37922.44, 37312.25, 37406.23]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 19:00:00
+		index_id		: 333
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [37676.13, 37230.0, 37608.92]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 20:00:00
+		index_id		: 334
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [37790.0, 37485.94, 37740.39]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 21:00:00
+		index_id		: 335
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [37920.0, 37656.29, 37819.67]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 22:00:00
+		index_id		: 336
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [37971.61, 37652.79, 37784.12]
+		market_side		: Bear
+
+		timestamp		: 2021-02-05 23:00:00
+		index_id		: 337
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [38309.0, 37743.81, 38290.24]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 00:00:00
+		index_id		: 338
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 2
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 34544.29
+		stoploss		: 39479.19
+		margin_call		: 68295.61
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 814.00
+		balance			: 949.40
+		candles_hlc		: [38879.0, 38215.94, 38740.92]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 01:00:00
+		index_id		: 339
+		order_id		: 18
+		operation_type	: ['Exit Short by stoploss']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** LOSSED *** ***
+		profit_loss		: -31.41
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39482.18, 38275.86, 38806.45]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 02:00:00
+		index_id		: 340
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39535.36, 38612.0, 39382.1]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 03:00:00
+		index_id		: 341
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39666.0, 39200.0, 39384.74]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 04:00:00
+		index_id		: 342
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39386.93, 38933.0, 39179.56]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 05:00:00
+		index_id		: 343
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39238.0, 38600.0, 39014.73]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 06:00:00
+		index_id		: 344
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39458.37, 38989.9, 39267.47]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 07:00:00
+		index_id		: 345
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39488.62, 39156.16, 39359.12]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 08:00:00
+		index_id		: 346
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39699.69, 39297.75, 39425.02]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 09:00:00
+		index_id		: 347
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [39900.0, 39400.0, 39887.91]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 10:00:00
+		index_id		: 348
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40000.0, 39516.17, 39998.63]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 11:00:00
+		index_id		: 349
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40479.86, 39992.64, 40199.99]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 12:00:00
+		index_id		: 350
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40445.55, 39836.72, 39902.49]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 13:00:00
+		index_id		: 351
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40255.08, 39900.0, 40130.47]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 14:00:00
+		index_id		: 352
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40574.85, 40125.3, 40268.44]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 15:00:00
+		index_id		: 353
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40866.66, 40134.8, 40864.73]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 16:00:00
+		index_id		: 354
+		order_id		: 18
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 917.99
+		balance			: 917.99
+		candles_hlc		: [40955.51, 40478.19, 40608.76]
+		market_side		: Out of market
+
+		timestamp		: 2021-02-06 17:00:00
+		index_id		: 355
+		order_id		: 19
+		operation_type	: ['Entry Short, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 40197.01
+		entry_am_base	: 0.00570932
+		entry_am_quoted : 229.50
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40662.01, 40163.67, 40197.01]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 18:00:00
+		index_id		: 356
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40444.44, 40052.39, 40276.41]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 19:00:00
+		index_id		: 357
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40420.0, 39940.44, 40179.42]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 20:00:00
+		index_id		: 358
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40179.42, 39572.74, 40087.4]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 21:00:00
+		index_id		: 359
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40250.0, 40026.98, 40028.19]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 22:00:00
+		index_id		: 360
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40469.19, 39869.0, 39992.77]
+		market_side		: Bear
+
+		timestamp		: 2021-02-06 23:00:00
+		index_id		: 361
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [40083.86, 39035.33, 39186.94]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 00:00:00
+		index_id		: 362
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39611.04, 38701.0, 39564.17]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 01:00:00
+		index_id		: 363
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39588.9, 38500.0, 38627.36]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 02:00:00
+		index_id		: 364
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38820.0, 38344.0, 38747.31]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 03:00:00
+		index_id		: 365
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38926.58, 38554.63, 38841.46]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 04:00:00
+		index_id		: 366
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38839.52, 37923.0, 38312.99]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 05:00:00
+		index_id		: 367
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38692.04, 38175.02, 38511.0]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 06:00:00
+		index_id		: 368
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38700.0, 38282.44, 38531.35]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 07:00:00
+		index_id		: 369
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39094.36, 38410.63, 39030.0]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 08:00:00
+		index_id		: 370
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39529.0, 39021.22, 39496.96]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 09:00:00
+		index_id		: 371
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39700.0, 39304.18, 39513.92]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 10:00:00
+		index_id		: 372
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39658.04, 39124.39, 39331.42]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 11:00:00
+		index_id		: 373
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39358.0, 38762.16, 39046.6]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 12:00:00
+		index_id		: 374
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39272.69, 38530.25, 38820.87]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 13:00:00
+		index_id		: 375
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [39119.47, 38381.62, 38629.26]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 14:00:00
+		index_id		: 376
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38700.0, 38162.87, 38214.98]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 15:00:00
+		index_id		: 377
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38395.26, 37580.0, 37921.11]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 16:00:00
+		index_id		: 378
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38244.5, 37351.0, 38185.72]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 17:00:00
+		index_id		: 379
+		order_id		: 19
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 36579.28
+		stoploss		: 41804.89
+		margin_call		: 72756.59
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 872.09
+		balance			: 917.99
+		candles_hlc		: [38208.6, 37685.96, 37870.62]
+		market_side		: Bear
+
+		timestamp		: 2021-02-07 18:00:00
+		index_id		: 380
+		order_id		: 20
+		operation_type	: ['Entry Long, first*']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 38239.10
+		entry_am_base	: 0.00607473
+		entry_am_quoted : 232.29
+		takeprofit		: 41298.23
+		stoploss		: 37091.93
+		margin_call		: 30973.67
+		leverage		: 5
+		sub_operation	: ['Close previous, short']
+		operation_result: *** *** WINNED *** ***
+		profit_loss		: 11.18
+		wallet			: 882.71
+		balance			: 929.17
+		candles_hlc		: [38342.88, 37846.66, 38239.1]
+		market_side		: Bull
+
+		timestamp		: 2021-02-07 19:00:00
+		index_id		: 381
+		order_id		: 20
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41298.23
+		stoploss		: 37091.93
+		margin_call		: 30973.67
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 882.71
+		balance			: 929.17
+		candles_hlc		: [38444.0, 37976.0, 38050.0]
+		market_side		: Bull
+
+		timestamp		: 2021-02-07 20:00:00
+		index_id		: 382
+		order_id		: 20
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41298.23
+		stoploss		: 37091.93
+		margin_call		: 30973.67
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 882.71
+		balance			: 929.17
+		candles_hlc		: [38492.82, 37660.97, 38471.95]
+		market_side		: Bull
+
+		timestamp		: 2021-02-07 21:00:00
+		index_id		: 383
+		order_id		: 21
+		operation_type	: ['Entry Long, pyramid**']
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 38384.71
+		entry_am_base	: 0.01180210
+		entry_am_quoted : 220.68
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38635.42, 38355.45, 38530.33]
+		market_side		: Bull
+
+		timestamp		: 2021-02-07 22:00:00
+		index_id		: 384
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38832.99, 38285.1, 38797.02]
+		market_side		: Bull
+
+		timestamp		: 2021-02-07 23:00:00
+		index_id		: 385
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39080.0, 38715.66, 38795.69]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 00:00:00
+		index_id		: 386
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39130.0, 38650.76, 38725.4]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 01:00:00
+		index_id		: 387
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38909.95, 38430.48, 38521.72]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 02:00:00
+		index_id		: 388
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38650.0, 38149.0, 38249.0]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 03:00:00
+		index_id		: 389
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38497.5, 37988.89, 38076.06]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 04:00:00
+		index_id		: 390
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38684.21, 37992.39, 38584.7]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 05:00:00
+		index_id		: 391
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [38872.0, 38440.68, 38677.47]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 06:00:00
+		index_id		: 392
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39233.39, 38620.0, 39012.69]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 07:00:00
+		index_id		: 393
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39391.78, 38874.63, 39269.95]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 08:00:00
+		index_id		: 394
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39349.56, 39040.17, 39175.38]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 09:00:00
+		index_id		: 395
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39364.77, 38888.0, 38954.27]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 10:00:00
+		index_id		: 396
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39450.1, 38844.75, 39418.71]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 11:00:00
+		index_id		: 397
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 1
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 41612.76
+		stoploss		: 37374.42
+		margin_call		: 31091.62
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 838.57
+		balance			: 929.17
+		candles_hlc		: [39498.99, 39301.01, 39423.08]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 12:00:00
+		index_id		: 398
+		order_id		: 21
+		operation_type	: ['Exit Long by takeprofit']
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: *** *** WINNED *** ***
+		profit_loss		: 38.10
+		wallet			: 967.27
+		balance			: 967.27
+		candles_hlc		: [43231.1, 39094.01, 42984.07]
+		market_side		: Bull
+
+		timestamp		: 2021-02-08 13:00:00
+		index_id		: 399
+		order_id		: 21
+		operation_type	: []
+		pyramid_count	: 0
+		flags			: []
+		entry_price		: 0.00
+		entry_am_base	: 0.00000000
+		entry_am_quoted : 0.00
+		takeprofit		: 0.00
+		stoploss		: 0.00
+		margin_call		: 0.00
+		leverage		: 5
+		sub_operation	: []
+		operation_result: 
+		profit_loss		: 0.00
+		wallet			: 967.27
+		balance			: 967.27
+		candles_hlc		: [44918.0, 41906.7, 42897.12]
+		market_side		: Out of market
+                                     0
+symbol                         BTCUSDT
+start_date         2021-01-22 22:00:00
+end_date           2021-04-16 07:00:00
+balance                   947.20799200
+profit                    -52.79200800
+drawdown                 -395.78151649
+profit_after_fees         -54.17515861
+num_operations                     131
+num_long                            22
+num_shorts                          65
+winned                              20
+lossed                              24
+winrate                     0.45454545
+fitness_function         -135.41254903
+{'bb_len': 41, 'n_std': 2.0, 'rsi_len': 30, 'rsi_overbought': 72, 'rsi_oversold': 46, 'tp_long': 1.08, 'tp_short': 0.91, 'sl_long': 0.97, 'sl_short': 1.04}
+{'initial_balance': 1000, 'leverage': 5, 'trailing_stop_loss': False, 'entry_amount_p': 0.05, 'bullMarket': True, 'bearMarket': True}
+
+Strategy, roi       : %-5.42
+Buy and Hold, roi   : %87.04
+Price range         : 32835.29 -> 61414.83
