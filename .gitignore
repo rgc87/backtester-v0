@@ -1,10 +1,18 @@
+# directories
+testOutput/*
+testExec/*
+
+# python
 __pycache__
+
+# ejecutables de prueba
 tester.py
 show_strat.py
+
+# otros
 visualizationStrat.ipynb
-redirect.txt
+
+# output de prueba
+*.txt
+
 .ipynb_checkpoints
-red-backt.txt
-redirect2.txt
-redirect3.txt
-redirect4.txt
