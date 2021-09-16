@@ -20,7 +20,9 @@ class Individual:
 			trailing_stop_loss = trailing_stop_loss,
 			entry_amount_p = entry_amount_p,
 			showBinnacle=False,
-			plotOnNewWindow=False
+			plotOnNewWindow=False,
+			bullMarket=True,
+			bearMarket=True
 		)
 
 

@@ -1,24 +1,24 @@
-import pandas as pd
-from Backtester import Backtester
-from utils import klinesFilter
-from strategies import BBStrategy
-import re
+import  pandas      as      pd
+from    Backtester  import  Backtester
+from    utils       import  klinesFilter
+from    strategies  import  BBStrategy
+import  re
 
 
 # IMPORT DATA SOURCES
-pathFile    = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
-df          = pd.read_csv(pathFile)
-df          = klinesFilter(df, tf='1h')
-df          = df.iloc[30000:32000]
+pathFile        = '/home/llagask/trading/binance-api-samchardyWrap/data/1h/binance-BTCUSDT-1h.csv'
+df              = pd.read_csv(pathFile)
+df              = klinesFilter(df, tf='1h')
+df              = df.iloc[-5000:-1]
 
-start_date  = df.index[0]
-end_date    = df.index[-1]
-elapsed_time= start_date-end_date
+start_date      = df.index[0]
+end_date        = df.index[-1]
+elapsed_time    = start_date-end_date
 
 # Show ROI
-first_price = df.close.iloc[0]
-last_price  = df.close.iloc[-1]
-bh_roi      = (( last_price / first_price )-1)*100
+first_price     = df.close.iloc[0]
+last_price      = df.close.iloc[-1]
+bh_roi          = (( last_price / first_price )-1)*100
 
 pairNamePattern = re.compile('[A-Z]{6,}')
 symbol          = pairNamePattern.search(pathFile).group()
@@ -30,10 +30,10 @@ rsi_len         = 30
 rsi_overbought  = 72
 rsi_oversold    = 46
 
-tp_long         =   (8/100)+1       # +x%
-tp_short        =   (100-9)/100     # -x%
-sl_long         =   (100-3)/100     # -x%
-sl_short        =   (4/100)+1       # +x%
+tp_long         =   (8/100)+1       # + 8%
+tp_short        =   (100-9)/100     # - 9%
+sl_long         =   (100-3)/100     # - 3%
+sl_short        =   (4/100)+1       # + 4%
 
 strategy = BBStrategy(
     bb_len,
@@ -48,10 +48,10 @@ strategy.setUp(df)
 # BACKTEST ATRIBUTES
 initial_balance     = 1000
 leverage            = 5
-trailing_stop_loss  = True
+trailing_stop_loss  = False
 entry_amount_p      = 0.05
 
-showBinnacle        = True
+showBinnacle        = False
 plotOnNewWindow     = False
 
 bullMarket          = True
@@ -104,8 +104,13 @@ strategy_roi    =    ( ((net_profit+initial_balance) / initial_balance)-1 ) *100
 print(
     pd.DataFrame.from_dict(output, orient='index')
 )
+
+""" import pprint
+pprint.pprint(genes)
+pprint.pprint(parameters) """
 print(genes)
 print(parameters)
+
 print(f"""
 Strategy, roi       : %{strategy_roi :.2f}
 Buy and Hold, roi   : %{bh_roi:.2f}

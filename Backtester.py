@@ -57,6 +57,7 @@ class Backtester():
 		self.market_side 		= 'Out of market' 		#Bear, Bull
 		self.entry_price		= float()
 		self.pyramid_counter	= 0
+		# self.exposition			= lambda : self.balance - self.wallet
 
 
 	def binnacle(self):
@@ -123,7 +124,7 @@ class Backtester():
 
 		# *** Reset values
 		self.operation_type.clear()
-		# self.flags.clear()
+		self.flags.clear()
 
 
 	def binnaclePrint(self):
@@ -176,24 +177,24 @@ class Backtester():
 			if side == 'long':
 				self.num_longs 	+= 1
 
-				if self.bearMarket:																	#Close previous
+				if self.bearMarket:
 					if self.is_short_open:
 						self.sub_operation.append('Close previous, short')
 						self.close_position(price)
 
 				if self.bullMarket:
-					if self.is_long_open:															#Then make a pyramid
+					if self.is_long_open:
 						self.operation_type.append('Entry Long, pyramid**')
 						self.pyramid_counter 				   += 1
-						self.long_open_price				    = (self.long_open_price + price)/2 	# Recalculo
+						self.long_open_price				    = (self.long_open_price + price)/2 	# Recalc.
 						self.entry_price						= self.long_open_price
-						self.amount 						   += self.entry_amount()/price 		# Recalculo
+						self.amount 						   += self.entry_amount()/price 		# Recalc.
 
 						self.entry_amount_quoted 				= self.entry_amount()
 						self.entry_amount_base 					= self.amount
 						self.wallet					 		   -= self.entry_amount()/self.LEVERAGE
 					else:
-						self.operation_type.append('Entry Long, first*')							# First on chain
+						self.operation_type.append('Entry Long, first*')
 						self.is_long_open 					 	= True
 						self.long_open_price 				 	= price
 						self.entry_price						= self.long_open_price
@@ -208,23 +209,23 @@ class Backtester():
 			if side == 'short':
 				self.num_shorts += 1
 
-				if self.bullMarket:																	#Close previous
+				if self.bullMarket:
 					if self.is_long_open:
 						self.sub_operation.append('Close previous, long')
 						self.close_position(price)
 
 				if self.bearMarket:
-					if self.is_short_open:															#Then make a pyramid
+					if self.is_short_open:
 						self.operation_type.append('Entry Short, pyramid**')
 						self.pyramid_counter 				   += 1
-						self.short_open_price	 				= (self.short_open_price + price)/2 #Recálculo
+						self.short_open_price	 				= (self.short_open_price + price)/2 #Recalc.
 						self.entry_price						= self.short_open_price
-						self.amount 			 			   += self.entry_amount()/price			#Recálculo
+						self.amount 			 			   += self.entry_amount()/price			#Recalc.
 
 						self.entry_amount_quoted 				= self.entry_amount()
 						self.entry_amount_base 					= self.amount
 						self.wallet					 		   -= self.entry_amount()/self.LEVERAGE
-					else:																			# First on chain
+					else:
 						self.operation_type.append('Entry Short, first*')
 
 						self.is_short_open 					    = True
@@ -276,25 +277,21 @@ class Backtester():
 		self.pyramid_counter			= 0
 
 	def set_take_profit(self, price, tp_long, tp_short):
-		# self.tp_long = tp_long
 		if self.bullMarket:
 			if self.is_long_open:
 				self.take_profit_price 	= price * tp_long
 		if self.bearMarket:
 			if self.is_short_open:
 				self.take_profit_price 	= price * tp_short
-				# self.flags.append( object )
 
 
 	def set_stop_loss(self, price, sl_long, sl_short):
 		if self.bullMarket:
 			if self.is_long_open:
 				self.stop_loss_price 	= price * sl_long
-				# self.flags.append( object )
 		if self.bearMarket:
 			if self.is_short_open:
 				self.stop_loss_price	= price * sl_short
-				# self.flags.append(f'from s_s_l()bear:{self.stop_loss_price}')
 
 
 	def return_results(self, symbol, start_date, end_date):
@@ -352,47 +349,46 @@ class Backtester():
 				self.flags					= []
 				self.candles 				= [high[i],low[i],close[i]]
 
+				# *** LONGS
 				if self.bullMarket:
 					if strategy.checkLongSignal(i):
-						# if wallet >= entry_amount_p*self.balance:
-						self.open_position(
-							price 		= close[i],
-							side 		= 'long',
-							from_opened = i
-						)
-						# else: continue
-
-						self.set_take_profit(
-							price 		=	close[i],
-							tp_long		=	tp_long,
-							tp_short	=	tp_short
-						)
-						self.set_stop_loss(
-							price 		=	close[i],
-							sl_long		=	sl_long,
-							sl_short	=	sl_short
-						)
+						if self.wallet >= self.entry_amount():
+							self.open_position(
+								price 		= close[i],
+								side 		= 'long',
+								from_opened = i
+							)
+							self.set_take_profit(
+								price 		=	close[i],
+								tp_long		=	tp_long,
+								tp_short	=	tp_short
+							)
+							self.set_stop_loss(
+								price 		=	close[i],
+								sl_long		=	sl_long,
+								sl_short	=	sl_short
+							)
+				# *** SHORTS
 				if self.bearMarket:
 					if strategy.checkShortSignal(i):
-						# if wallet >= entry_amount_p*self.balance:
-						self.open_position(
-							price 		= close[i],
-							side 		= 'short',
-							from_opened = i
-						)
-						# else: continue
+						if self.wallet >= self.entry_amount():
+							self.open_position(
+								price 		= close[i],
+								side 		= 'short',
+								from_opened = i
+							)
+							self.set_take_profit(
+								price 		=	close[i],
+								tp_long		=	tp_long,
+								tp_short	=	tp_short
+							)
+							self.set_stop_loss(
+								price 		=	close[i],
+								sl_long		=	sl_long,
+								sl_short	=	sl_short
+							)
 
-						self.set_take_profit(
-							price 		=	close[i],
-							tp_long		=	tp_long,
-							tp_short	=	tp_short
-						)
-						self.set_stop_loss(
-							price 		=	close[i],
-							sl_long		=	sl_long,
-							sl_short	=	sl_short
-						)
-
+				# *** Trailing stop loss
 				if self.from_opened < i:
 					if self.bullMarket:
 						if self.trailing_stop_loss  and self.is_long_open:
@@ -426,6 +422,7 @@ class Backtester():
 								self.stop_loss_price = previous_stop_loss
 								self.flags.append(f'trailed rejected')
 
+				# *** takeprofit | stoploss
 				if self.bullMarket:
 					if self.is_long_open:
 						if high[i] >= self.take_profit_price:
@@ -443,22 +440,27 @@ class Backtester():
 							self.close_position(price = self.take_profit_price)
 							self.operation_type.append('Exit Short by takeprofit')
 
-				# *** Register binnacle, each iteration ***
-				self.binnacle()
+				# *** parse and storage binnacle, each iteration ***
+				if self.showBinnacle:
+					self.binnacle()
+				else:
+					self.operation_type.clear()
+					self.flags.clear()
 
-			else:
+			else: # no money
 				print('\n*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***\n')
 				import sys
 				sys.exit()
-		# *** *** *** *** *** OUT OF FOR CICLE, in range(df) *** *** *** *** ***
 
+		# *** *** *** *** *** OUT OF FOR CICLE, in range(df) *** *** *** *** ***
 		if self.showBinnacle:
 			self.binnaclePrint()
 
 		if self.plotOnNewWindow:
 			self.__plot__(df)
-
 		# *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***  ***  ***
+
+
 
 	def __plot__(self,df):
 		dframe = df
