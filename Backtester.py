@@ -51,8 +51,8 @@ class Backtester():
 		self.archive 			= [] 					#Store dict(binnacles)
 
 		self.order_id			= 0
-		self.take_profit_price 	= float()
-		self.stop_loss_price 	= float()
+		self.take_profit_price 	= 0
+		self.stop_loss_price 	= 0
 		self.margin_call		= float() #lambda : self.entry_price * self.margin_rate
 		self.market_side 		= 'Out of market' 		#Bear, Bull
 		self.entry_price		= float()
@@ -60,6 +60,7 @@ class Backtester():
 
 
 	def binnacle(self):
+		# *** some logic ***
 		if len(self.operation_type) >0:
 			if 'Entry Long' in self.operation_type[0]:
 				self.market_side = 'Bull'
@@ -70,57 +71,63 @@ class Backtester():
 			(self.take_profit_price == 0 and self.stop_loss_price == 0):
 				self.market_side = 'Out of market'
 
-		# *** Storage on dictionary
-		# binnacle ={
-		# 	'timestamp'			: self.timestamp,
-		# 	'index_id'			: self.index_id,
-		# 	'order_id'			: self.order_id,
-		# 	'operation_type'	: (self.operation_type),
-		# 	'pyramid_count'		: self.pyramid_counter,
-		# 	'entry_price'		: f'{self.entry_price:.2f}',
-		# 	'entry_am_base'		: f'{self.entry_amount_base:.8f}',
-		# 	'entry_am_quoted'	: f'{self.entry_amount_quoted:.2f}',
-		# 	'takeprofit'		: f'{self.take_profit_price:.2f}',
-		# 	'stoploss'			: f'{self.stop_loss_price:.2f}',
-		# 	'margin_call'		: f'{self.margin_call:.2f}',
-		# 	'leverage'			: self.LEVERAGE,
-		# 	'sub_operation'		: self.sub_operation,
-		# 	'operation_result'	: self.operation_result,
-		# 	'profit_loss'		: f'{self.pL:.2f}',
-		# 	'wallet'			: f'{self.wallet:.2f}',
-		# 	'balance'			: f'{self.balance:.2f}',
-		# 	'candles_hlc'		: self.candles,
-		# 	'market_side'		: self.market_side
-		# }
-		# self.archive.append(binnacle)
-		print(f'''
-		timestamp		: {self.timestamp}
-		index_id		: {self.index_id}
-		order_id		: {self.order_id}
-		operation_type	: {self.operation_type}
-		pyramid_count	: {self.pyramid_counter}
-		entry_price		: {f'{self.entry_price:.2f}'}
-		entry_am_base	: {f'{self.entry_amount_base:.8f}'}
-		entry_am_quoted : {f'{self.entry_amount_quoted:.2f}'}
-		takeprofit		: {f'{self.take_profit_price:.2f}'}
-		stoploss		: {f'{self.stop_loss_price:.2f}'}
-		margin_call		: {f'{self.margin_call:.2f}'}
-		leverage		: {self.LEVERAGE}
-		sub_operation	: {self.sub_operation}
-		operation_result: {self.operation_result}
-		profit_loss		: {f'{self.pL:.2f}'}
-		wallet			: {f'{self.wallet:.2f}'}
-		balance			: {f'{self.balance:.2f}'}
-		candles_hlc		: {self.candles}
-		market_side		: {self.market_side}''')
+		# *** Storage on a dictionary
+		"""Coming soon...
+			- periods on market by operation
+			- ...
+		"""
+		binnacle ={
+			'timestamp'			: self.timestamp,
+			'index_id'			: self.index_id,
+			'order_id'			: self.order_id,
+			'operation_type'	: (self.operation_type.copy()),
+			'pyramid_count'		: self.pyramid_counter,
+			'entry_price'		: f'{self.entry_price:.2f}',
+			'entry_am_base'		: f'{self.entry_amount_base:.8f}',
+			'entry_am_quoted'	: f'{self.entry_amount_quoted:.2f}',
+			'takeprofit'		: f'{self.take_profit_price:.2f}',
+			'stoploss'			: f'{self.stop_loss_price:.2f}',
+			'flags'				: self.flags,
+			'margin_call'		: f'{self.margin_call:.2f}',
+			'leverage'			: self.LEVERAGE,
+			'sub_operation'		: self.sub_operation,
+			'operation_result'	: self.operation_result,
+			'profit_loss'		: f'{self.pL:.2f}',
+			'wallet'			: f'{self.wallet:.2f}',
+			'balance'			: f'{self.balance:.2f}',
+			'exposition'		: f'{self.balance-self.wallet:.2f}',
+			'candles_hlc'		: self.candles,
+			'market_side'		: self.market_side
+		}
+		self.archive.append(binnacle.copy())
+		# print(f'''
+			# timestamp		: {self.timestamp}
+			# index_id		: {self.index_id}
+			# order_id		: {self.order_id}
+			# operation_type	: {self.operation_type}
+			# pyramid_count	: {self.pyramid_counter}
+			# entry_price		: {f'{self.entry_price:.2f}'}
+			# entry_am_base	: {f'{self.entry_amount_base:.8f}'}
+			# entry_am_quoted : {f'{self.entry_amount_quoted:.2f}'}
+			# takeprofit		: {f'{self.take_profit_price:.2f}'}
+			# stoploss		: {f'{self.stop_loss_price:.2f}'}
+			# margin_call		: {f'{self.margin_call:.2f}'}
+			# leverage		: {self.LEVERAGE}
+			# sub_operation	: {self.sub_operation}
+			# operation_result: {self.operation_result}
+			# profit_loss		: {f'{self.pL:.2f}'}
+			# wallet			: {f'{self.wallet:.2f}'}
+			# balance			: {f'{self.balance:.2f}'}
+			# candles_hlc		: {self.candles}
+			# market_side		: {self.market_side}''')
 
 		# *** Reset values
 		self.operation_type.clear()
-		self.flags.clear()
+		# self.flags.clear()
 
 
 	def binnaclePrint(self):
-		for b in self.archive[100:-1]:
+		for b in self.archive[0:300]:
 			print(f'''
 			timestamp		:{b['timestamp']}
 			index_id		:{b['index_id']}
@@ -132,6 +139,7 @@ class Backtester():
 			entry_am_quoted	:{b['entry_am_quoted']}
 			takeprofit		:{b['takeprofit']}
 			stoploss		:{b['stoploss']}
+			flags			:{b['flags']}
 			margin_call		:{b['margin_call']}
 			leverage		:{b['leverage']}
 			sub_operation	:{b['sub_operation']}
@@ -139,8 +147,10 @@ class Backtester():
 			profit_loss		:{b['profit_loss']}
 			wallet			:{b['wallet']}
 			balance			:{b['balance']}
+			exposition		:{b['exposition']}
 			candles_hlc		:{b['candles_hlc']}
-			market_side		:{b['market_side']}''')
+			market_side		:{b['market_side']}
+			''')
 
 
 	def reset_results(self):
@@ -273,15 +283,18 @@ class Backtester():
 		if self.bearMarket:
 			if self.is_short_open:
 				self.take_profit_price 	= price * tp_short
+				# self.flags.append( object )
 
 
 	def set_stop_loss(self, price, sl_long, sl_short):
 		if self.bullMarket:
 			if self.is_long_open:
 				self.stop_loss_price 	= price * sl_long
+				# self.flags.append( object )
 		if self.bearMarket:
 			if self.is_short_open:
 				self.stop_loss_price	= price * sl_short
+				# self.flags.append(f'from s_s_l()bear:{self.stop_loss_price}')
 
 
 	def return_results(self, symbol, start_date, end_date):
@@ -330,17 +343,14 @@ class Backtester():
 			if self.balance > 0:
 				self.index_id				= i
 				self.timestamp 				= df.index[i]
-				self.candles 				= [high[i],low[i],close[i]]
-				# self.market_side 			= 'out of market'
+				self.entry_amount_quoted 	= float()
+				self.entry_amount_base 		= float()
+				self.operation_result		= str()
+				self.pL						= float()
 				self.operation_type			= []
 				self.sub_operation			= []
 				self.flags					= []
-				self.operation_result		= str()
-				self.entry_amount_base 		= float()
-				self.entry_amount_quoted 	= float()
-				self.pL						= float()
-				# self.entry_price			= float()
-
+				self.candles 				= [high[i],low[i],close[i]]
 
 				if self.bullMarket:
 					if strategy.checkLongSignal(i):
@@ -383,16 +393,38 @@ class Backtester():
 							sl_short	=	sl_short
 						)
 
-				if self.trailing_stop_loss  and (self.is_long_open or self.is_short_open):
-					new_max 			= high[self.from_opened:i].max()
-					previous_stop_loss 	= self.stop_loss_price
-					self.set_stop_loss(
-						price 	= new_max,
-						sl_long	=sl_long,
-						sl_short=sl_short
-					)
-					if previous_stop_loss > self.stop_loss_price:
-						self.stop_loss_price = previous_stop_loss
+				if self.from_opened < i:
+					if self.bullMarket:
+						if self.trailing_stop_loss  and self.is_long_open:
+							new_max 			= high[self.from_opened:i].max()
+							previous_stop_loss 	= self.stop_loss_price
+
+							self.set_stop_loss(
+								price 	= new_max,
+								sl_long	=sl_long,
+								sl_short=sl_short
+							)
+							self.flags.append(f'trailed stop')
+
+							if previous_stop_loss > self.stop_loss_price:
+								self.stop_loss_price = previous_stop_loss
+								self.flags.append(f'trailed rejected')
+
+					elif self.bearMarket:
+						if self.trailing_stop_loss  and self.is_short_open:
+							new_min 			= low[self.from_opened:i].min()
+							previous_stop_loss 	= self.stop_loss_price
+
+							self.set_stop_loss(
+								price 	= new_min,
+								sl_long	=sl_long,
+								sl_short=sl_short
+							)
+							self.flags.append(f'trailed stop')
+
+							if previous_stop_loss < self.stop_loss_price:
+								self.stop_loss_price = previous_stop_loss
+								self.flags.append(f'trailed rejected')
 
 				if self.bullMarket:
 					if self.is_long_open:
@@ -411,8 +443,8 @@ class Backtester():
 							self.close_position(price = self.take_profit_price)
 							self.operation_type.append('Exit Short by takeprofit')
 
-				# if self.index_id>56 and self.index_id<400:
-					self.binnacle()
+				# *** Register binnacle, each iteration ***
+				self.binnacle()
 
 			else:
 				print('\n*** *** *** *** *** *** BANKRUPTCY *** *** *** *** *** ***\n')
@@ -420,13 +452,13 @@ class Backtester():
 				sys.exit()
 		# *** *** *** *** *** OUT OF FOR CICLE, in range(df) *** *** *** *** ***
 
-		""" if self.showBinnacle:
-			self.binnaclePrint() """
+		if self.showBinnacle:
+			self.binnaclePrint()
 
 		if self.plotOnNewWindow:
 			self.__plot__(df)
 
-		# *** *** *** *** *** 								 *** *** *** *** ***
+		# *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***  ***  ***
 
 	def __plot__(self,df):
 		dframe = df

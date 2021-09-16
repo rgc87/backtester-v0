@@ -1,5 +1,5 @@
 from GenAlgo import Population
-from stratcode import BBStrategy
+from strategies import BBStrategy
 import pandas as pd
 from utils import klinesFilter
 import re

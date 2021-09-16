@@ -1,7 +1,7 @@
 import pandas as pd
 from Backtester import Backtester
 from utils import klinesFilter
-from stratcode import BBStrategy
+from strategies import BBStrategy
 import re
 
 
@@ -30,10 +30,10 @@ rsi_len         = 30
 rsi_overbought  = 72
 rsi_oversold    = 46
 
-tp_long     =   (8/100)+1       #1,09 -> +9%
-tp_short    =   (100-9)/100     #0,97 -> -3%
-sl_long     =   (100-3)/100     #0,99 -> -1%
-sl_short    =   (4/100)+1       #1,04 -> +4%
+tp_long         =   (8/100)+1       # +x%
+tp_short        =   (100-9)/100     # -x%
+sl_long         =   (100-3)/100     # -x%
+sl_short        =   (4/100)+1       # +x%
 
 strategy = BBStrategy(
     bb_len,
@@ -48,7 +48,7 @@ strategy.setUp(df)
 # BACKTEST ATRIBUTES
 initial_balance     = 1000
 leverage            = 5
-trailing_stop_loss  = False
+trailing_stop_loss  = True
 entry_amount_p      = 0.05
 
 showBinnacle        = True
