@@ -1,69 +1,91 @@
-import numpy as np
-from Backtester import Backtester
+import 	numpy 		as 		np
+from 	Backtester 	import 	Backtester
 
 
 class Individual:
+
 	def __init__(self,
 				n_genes,
 				gene_ranges,
 				initial_balance,
 				leverage,
 				trailing_stop_loss,
-				entry_amount_p
+				entry_amount_percentage,
+				bullMarket,
+				bearMarket
+
 	):
-		self.genes = [
-			np.random.randint(gene_ranges[x][0] , gene_ranges[x][1]) for x in range(n_genes)
+		self.genes 		= [
+							np.random.randint(gene_ranges[x][0] , gene_ranges[x][1]) \
+							for x in range(n_genes)
 		]
 		self.backtester = Backtester(
-			initial_balance =	initial_balance,
-			leverage = leverage,
-			trailing_stop_loss = trailing_stop_loss,
-			entry_amount_p = entry_amount_p,
-			showBinnacle=False,
-			plotOnNewWindow=False,
-			bullMarket=True,
-			bearMarket=True
+									initial_balance 		= initial_balance,
+									leverage 				= leverage,
+									trailing_stop_loss 		= trailing_stop_loss,
+									entry_amount_percentage = entry_amount_percentage,
+									showBinnacle			= False,
+									plotOnNewWindow			= False,
+									bullMarket				= bullMarket,
+									bearMarket				= bearMarket
 		)
 
 
 class Population:
-	def __init__(self, generation_size, n_genes, gene_ranges,  n_best, mutation_rate,
-				initial_balance,leverage, trailing_stop_loss, entry_amount_p
+	def __init__(self,
+				generation_size,
+				n_genes,
+				gene_ranges,
+				n_best,
+				mutation_rate,
+
+				initial_balance,
+				leverage,
+				trailing_stop_loss,
+				entry_amount_percentage,
+				bullMarket,
+				bearMarket
 	):
 		self.population = [
 							Individual(	n_genes,
 										gene_ranges,
+
 										initial_balance,
 										leverage,
 										trailing_stop_loss,
-										entry_amount_p
+										entry_amount_percentage,
+										bullMarket,
+										bearMarket
 							)
 							for _ in range(generation_size)
 		]
-		self.n_genes = n_genes
-		self.gene_ranges = gene_ranges
-		self.n_best = n_best
-		self.generation_size = generation_size
-		self.mutation_rate = mutation_rate
-		self.initial_balance = initial_balance
-		self.leverage = leverage,
-		self.trailing_stop_loss = trailing_stop_loss,
-		self.entry_amount_p = entry_amount_p
+		self.n_genes 					= n_genes
+		self.gene_ranges 				= gene_ranges
+		self.n_best 					= n_best
+		self.generation_size 			= generation_size
+		self.mutation_rate 				= mutation_rate
+
+		self.initial_balance 			= initial_balance
+		self.leverage 					= leverage,
+		self.trailing_stop_loss 		= trailing_stop_loss,
+		self.entry_amount_percentage 	= entry_amount_percentage
+		self.bullMarket					= bullMarket # unecesary
+		self.bearMarket					= bearMarket # unecesary
 
 	def selection(self):
 		return sorted(
 			self.population, key = lambda individual: individual.backtester.return_results(
-				symbol = None,
-				start_date = None,
-				end_date = None,
+				symbol 		= None,
+				start_date 	= None,
+				end_date 	= None,
 			)['fitness_function'],
-				reverse = True
+				reverse 	= True
 		)[0:self.n_best]
 
 	def crossover(self):
-		selected = self.selection()
-		point = 0
-		father = []
+		selected 	= self.selection()
+		point 		= 0
+		father 		= []
 		for i in range(self.generation_size):
 			father = np.random.choice(self.n_best, size = 2, replace = False)
 			father = [selected[x] for x in father]
